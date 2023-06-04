@@ -201,7 +201,7 @@ curseforge {
         addGameVersion("1.16.4")
         addGameVersion(mcVersion)
 
-        changelog = readChangelog() ?: "No changelog provided."
+        changelog = file("build/changelog.txt")
         changelogType = "markdown"
         releaseType = property("curseFileType")
 
@@ -210,8 +210,7 @@ curseforge {
         mainArtifact(tasks.findByName("jar")) {
             relations {
                 requiredDependency("dynamictrees")
-                requiredDependency("oh-the-biomes-youll-go")
-                optionalDependency("dynamictreesplus")
+                requiredDependency("pams-harvestcraft-2-trees")
             }
         }
     }

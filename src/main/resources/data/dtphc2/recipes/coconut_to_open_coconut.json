@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dtphc2:coconut_seed"
+    }
+  ],
+  "result": {
+    "item": "pamhc2trees:coconutitem",
+    "count": 2
+  }
+}

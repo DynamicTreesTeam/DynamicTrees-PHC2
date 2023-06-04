@@ -19,17 +19,10 @@
   "perfect_biomes": { "types": [ "beach", "overworld" ] },
   "acceptable_soils": ["dirt_like", "sand_like"],
   "primitive_saplings": [
-    { "sapling_block": "pamhc2trees:coconut_sapling" },
-    {
-      "sapling_item": "pamhc2trees:coconutitem",
-      "can_craft_seed_to_sapling": false
-    }
+    { "sapling_block": "pamhc2trees:coconut_sapling" }
   ],
   "pods": [
     "dtphc2:coconut"
-  ],
-  "acceptable_soils": [
-    "dirt_like", "sand_like"
   ],
   "features": [
     {
