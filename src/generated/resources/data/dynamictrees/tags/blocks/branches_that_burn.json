@@ -1,11 +1,9 @@
 {
-  "replace": false,
   "values": [
     "dtphc2:cinnamon_branch",
     "dtphc2:dragon_fruit_branch",
     "dtphc2:maple_branch",
     "dtphc2:palm_branch",
-    "dtphc2:paperbark_branch",
-    "dtphc2:rubber_branch"
+    "dtphc2:paperbark_branch"
   ]
 }

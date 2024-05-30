@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class PalmPod extends Pod {
+public class PalmPod extends DTPHC2Pod {
 
     public static final TypedRegistry.EntryType<Pod> TYPE = TypedRegistry.newType(PalmPod::new);
 

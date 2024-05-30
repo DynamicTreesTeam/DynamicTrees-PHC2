@@ -1,11 +1,16 @@
 package maxhyper.dtphc2.init;
 
-import com.ferreusveritas.dynamictrees.api.TreeRegistry;
 import com.ferreusveritas.dynamictrees.api.applier.ApplierRegistryEvent;
 import com.ferreusveritas.dynamictrees.deserialisation.PropertyAppliers;
+import com.ferreusveritas.dynamictrees.systems.fruit.Fruit;
+import com.ferreusveritas.dynamictrees.systems.pod.Pod;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
 import com.google.gson.JsonElement;
 import maxhyper.dtphc2.DynamicTreesPHC2;
+import maxhyper.dtphc2.fruits.DTPHC2Fruit;
+import maxhyper.dtphc2.fruits.DTPHC2Pod;
+import maxhyper.dtphc2.fruits.FallingFruit;
+import maxhyper.dtphc2.fruits.OffsetFruit;
 import maxhyper.dtphc2.trees.FruitLogSpecies;
 import maxhyper.dtphc2.trees.GenOnExtraSoilSpecies;
 import net.minecraft.resources.ResourceLocation;
@@ -13,7 +18,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = DynamicTreesPHC2.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class RegisterJSONAppliers {
@@ -23,15 +27,38 @@ public final class RegisterJSONAppliers {
         registerSpeciesAppliers(event.getAppliers());
     }
 
+    @SubscribeEvent
+    public static void registerAppliersFruit(final ApplierRegistryEvent.Reload<Fruit, JsonElement> event) {
+        registerFruitAppliers(event.getAppliers());
+    }
+
+    @SubscribeEvent
+    public static void registerAppliersPod(final ApplierRegistryEvent.Reload<Pod, JsonElement> event) {
+        registerPodAppliers(event.getAppliers());
+    }
+
     public static void registerSpeciesAppliers(PropertyAppliers<Species, JsonElement> appliers) {
         appliers.register("extra_soil_for_worldgen", GenOnExtraSoilSpecies.class, Block.class,
-                GenOnExtraSoilSpecies::setExtraSoil)
+                        GenOnExtraSoilSpecies::setExtraSoil)
                 .register("log_drop_item", FruitLogSpecies.class, Item.class, FruitLogSpecies::setDropItem)
                 //.register("log_drop_item", FruitLogSpecies.class, ResourceLocation.class, FruitLogSpecies::setDropItem)
                 .register("log_drop_multiplier", FruitLogSpecies.class, Float.class, FruitLogSpecies::setMultiplier)
                 .register("log_drop_fake_log", FruitLogSpecies.class, Item.class, FruitLogSpecies::setFakeLog);
     }
 
+    public static void registerFruitAppliers(PropertyAppliers<Fruit, JsonElement> appliers) {
+        appliers.register("item_stack", DTPHC2Fruit.class, ResourceLocation.class, DTPHC2Fruit::setItemStackLoc)
+                .register("item_stack", FallingFruit.class, ResourceLocation.class, DTPHC2Fruit::setItemStackLoc)
+                .register("item_stack", OffsetFruit.class, ResourceLocation.class, DTPHC2Fruit::setItemStackLoc);
+    }
+    public static void registerPodAppliers(PropertyAppliers<Pod, JsonElement> appliers) {
+        appliers.register("item_stack", DTPHC2Pod.class, ResourceLocation.class, DTPHC2Pod::setItemStackLoc);
+    }
+
     @SubscribeEvent public static void registerAppliersSpecies(final ApplierRegistryEvent.GatherData<Species, JsonElement> event) { registerSpeciesAppliers(event.getAppliers()); }
+    @SubscribeEvent public static void registerAppliersFruit(final ApplierRegistryEvent.GatherData<Fruit, JsonElement> event) {
+        registerFruitAppliers(event.getAppliers());
+    }
+    @SubscribeEvent public static void registerAppliersPod(final ApplierRegistryEvent.GatherData<Pod, JsonElement> event) { registerPodAppliers(event.getAppliers()); }
 
 }

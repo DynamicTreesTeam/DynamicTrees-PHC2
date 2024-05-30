@@ -32,7 +32,7 @@ public class FruitVineItem extends BlockItem {
         int flags = getSeasonalTooltipFlags(world);
 
         if (flags != 0) {
-            tooltip.add(Component.literal("desc.sereneseasons.fertile_seasons").append(":"));
+            tooltip.add(Component.literal("desc.dynamictrees.seasonal.fertile_seasons").append(":"));
 
             if ((flags & 15) == 15) {
                 tooltip.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.year_round").withStyle(ChatFormatting.LIGHT_PURPLE)));

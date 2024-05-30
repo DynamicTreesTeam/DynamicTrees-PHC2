@@ -126,7 +126,7 @@ public class DynamicTreesPHC2 {
                 //SoilProperties.REGISTRY,
                 //Family.REGISTRY,
                 //Species.REGISTRY,
-                LeavesProperties.REGISTRY,
+                //LeavesProperties.REGISTRY,
                 Fruit.REGISTRY,
                 Pod.REGISTRY
         );

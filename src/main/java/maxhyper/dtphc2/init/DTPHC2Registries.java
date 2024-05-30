@@ -65,12 +65,14 @@ public class DTPHC2Registries {
         event.registerType(DynamicTreesPHC2.location("offset_down"), OffsetFruit.TYPE);
         event.registerType(DynamicTreesPHC2.location("falling_fruit"), FallingFruit.TYPE);
         event.registerType(DynamicTreesPHC2.location("cobweb"), CobwebFruit.TYPE);
+        event.registerType(DynamicTreesPHC2.location("phc2_fruit"), DTPHC2Fruit.TYPE);
     }
 
     @SubscribeEvent
     public static void registerPodType(final TypeRegistryEvent<Pod> event) {
         event.registerType(DynamicTreesPHC2.location("palm"), PalmPod.TYPE);
         event.registerType(DynamicTreesPHC2.location("falling_palm"), FallingPalmPod.TYPE);
+        event.registerType(DynamicTreesPHC2.location("phc2_pod"), DTPHC2Pod.TYPE);
     }
 
     @SubscribeEvent

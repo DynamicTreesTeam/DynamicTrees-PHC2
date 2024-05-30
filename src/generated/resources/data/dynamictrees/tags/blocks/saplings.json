@@ -1,5 +1,4 @@
 {
-  "replace": false,
   "values": [
     "dtphc2:almond_sapling",
     "dtphc2:apricot_sapling",
@@ -26,7 +25,6 @@
     "dtphc2:lychee_sapling",
     "dtphc2:mango_sapling",
     "dtphc2:maple_sapling",
-    "dtphc2:mesquite_sapling",
     "dtphc2:nutmeg_sapling",
     "dtphc2:olive_sapling",
     "dtphc2:orange_sapling",
@@ -38,12 +36,10 @@
     "dtphc2:pecan_sapling",
     "dtphc2:persimmon_sapling",
     "dtphc2:pinenut_sapling",
-    "dtphc2:pinyon_sapling",
     "dtphc2:pistachio_sapling",
     "dtphc2:plum_sapling",
     "dtphc2:pomegranate_sapling",
     "dtphc2:rambutan_sapling",
-    "dtphc2:rubber_sapling",
     "dtphc2:soursop_sapling",
     "dtphc2:spiderweb_sapling",
     "dtphc2:starfruit_sapling",

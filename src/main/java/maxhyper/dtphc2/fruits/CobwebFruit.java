@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.Vec3;
 
-public class CobwebFruit extends Fruit {
+public class CobwebFruit extends DTPHC2Fruit {
 
     public static final TypedRegistry.EntryType<Fruit> TYPE = TypedRegistry.newType(CobwebFruit::new);
 

@@ -1,5 +1,4 @@
 {
-  "replace": false,
   "values": [
     "dtphc2:almond_seed",
     "dtphc2:apricot_seed",
@@ -26,7 +25,6 @@
     "dtphc2:lychee_seed",
     "dtphc2:mango_seed",
     "dtphc2:maple_seed",
-    "dtphc2:mesquite_seed",
     "dtphc2:nutmeg_seed",
     "dtphc2:olive_seed",
     "dtphc2:orange_seed",
@@ -38,12 +36,10 @@
     "dtphc2:pecan_seed",
     "dtphc2:persimmon_seed",
     "dtphc2:pinenut_seed",
-    "dtphc2:pinyon_seed",
     "dtphc2:pistachio_seed",
     "dtphc2:plum_seed",
     "dtphc2:pomegranate_seed",
     "dtphc2:rambutan_seed",
-    "dtphc2:rubber_seed",
     "dtphc2:soursop_seed",
     "dtphc2:spiderweb_seed",
     "dtphc2:starfruit_seed",
