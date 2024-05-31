@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class OffsetFruit extends DTPHC2Fruit {
+public class OffsetFruit extends Fruit {
 
     public static final TypedRegistry.EntryType<Fruit> TYPE = TypedRegistry.newType(OffsetFruit::new);
 

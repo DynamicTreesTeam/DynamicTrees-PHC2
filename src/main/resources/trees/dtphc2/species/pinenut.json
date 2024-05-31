@@ -21,7 +21,7 @@
     "dry": 0.25,
     "wet": 0.75
   },
-  "perfect_biomes": { "types": [ "conifer", "overworld" ] },
+  "perfect_biomes": { "tags": [ "#forge:is_conifer", "#is_overworld" ] },
   "primitive_saplings": [
     { "sapling_block": "pamhc2trees:pinenut_sapling" },
     {

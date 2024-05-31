@@ -14,6 +14,6 @@
     "dry": 0.5,
     "snowy": 0.3
   },
-  "perfect_biomes": { "types": [ "jungle", "overworld" ] },
+  "perfect_biomes": { "tags": [ "#is_jungle", "#is_overworld" ] },
   "primitive_sapling": "pamhc2trees:cinnamon_sapling"
 }

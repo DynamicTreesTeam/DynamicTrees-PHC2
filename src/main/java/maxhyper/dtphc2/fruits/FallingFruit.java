@@ -7,7 +7,7 @@ import maxhyper.dtphc2.blocks.FallingFruitBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class FallingFruit extends DTPHC2Fruit {
+public class FallingFruit extends Fruit {
 
     public static final TypedRegistry.EntryType<Fruit> TYPE = TypedRegistry.newType(FallingFruit::new);
 

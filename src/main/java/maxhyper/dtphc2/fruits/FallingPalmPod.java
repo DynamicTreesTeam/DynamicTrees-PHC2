@@ -7,7 +7,7 @@ import maxhyper.dtphc2.blocks.FallingPodBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 
-public class FallingPalmPod extends DTPHC2Pod {
+public class FallingPalmPod extends Pod {
 
     public static final TypedRegistry.EntryType<Pod> TYPE = TypedRegistry.newType(FallingPalmPod::new);
 

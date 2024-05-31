@@ -1,9 +1,0 @@
-{
-  "item_stack": "pamhc2trees:mesquiteitem",
-  "block_shapes": [
-    { "function": "fruit", "parameters": { "radius": 0.5, "height": 4, "stem_length": 0, "fraction": 16 } },
-    { "function": "fruit", "parameters": { "radius": 0.5, "height": 4, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 1, "height": 8, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 1, "height": 10, "stem_length": 1.25 } }
-  ]
-}

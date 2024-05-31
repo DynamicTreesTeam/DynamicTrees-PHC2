@@ -15,7 +15,7 @@
   },
   "seasonal_fruiting_offset": 0,
   "inherit_fruiting_offset_to_fruits": true,
-  "perfect_biomes": { "types": [ "jungle", "overworld" ] },
+  "perfect_biomes": { "tags": [ "#is_jungle", "#is_overworld" ] },
   "acceptable_soils": ["dirt_like", "sand_like"],
   "primitive_saplings": [
     { "sapling_block": "pamhc2trees:lime_sapling" },

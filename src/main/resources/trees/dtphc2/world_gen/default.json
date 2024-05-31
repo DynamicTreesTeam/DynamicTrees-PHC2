@@ -6,7 +6,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 75,
           "dtphc2:maple": 1,
@@ -22,7 +22,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 40,
           "dtphc2:maple": 1
@@ -37,7 +37,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 450,
           "dtphc2:avocado": 1,
@@ -62,7 +62,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 350,
           "dtphc2:apricot": 2,
@@ -82,7 +82,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 150,
           "dtphc2:apricot": 2,
@@ -101,7 +101,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 10,
           "dtphc2:coconut": 2,
@@ -118,7 +118,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 260,
           "dtphc2:almond": 2,
@@ -146,7 +146,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 200,
           "dtphc2:apricot": 1,
@@ -173,7 +173,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 100,
           "dtphc2:date": 1
@@ -188,7 +188,7 @@
     },
     "apply": {
       "species": {
-        "method": "splice_after",
+        "method": "SPLICE_BEFORE",
         "random": {
           "...": 200,
           "dtphc2:lychee": 3,

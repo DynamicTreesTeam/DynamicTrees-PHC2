@@ -15,7 +15,7 @@
     "dry": 0.75,
     "forest": 1.05
   },
-  "perfect_biomes": { "types": [ "coniferous", "overworld" ] },
+  "perfect_biomes": { "tags": [ "#forge:is_coniferous", "#is_overworld" ] },
   "primitive_sapling": "pamhc2trees:maple_sapling",
   "features": [
     {

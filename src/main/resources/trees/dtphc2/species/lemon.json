@@ -13,7 +13,7 @@
   },
   "seasonal_fruiting_offset": 2.5,
   "inherit_fruiting_offset_to_fruits": true,
-  "perfect_biomes": { "types": [ "forest", "overworld" ] },
+  "perfect_biomes": { "tags": [ "#is_forest", "#is_overworld" ] },
   "primitive_saplings": [
     { "sapling_block": "pamhc2trees:lemon_sapling" },
     {

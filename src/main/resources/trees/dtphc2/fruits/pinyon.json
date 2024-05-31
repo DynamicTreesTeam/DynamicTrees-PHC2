@@ -1,9 +1,0 @@
-{
-  "item_stack": "dtphc2:pinyon_seed",
-  "block_shapes": [
-    { "function": "fruit", "parameters": { "radius": 1.1, "height": 4, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 1.5, "height": 2, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 2, "height": 4, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 2, "height": 4, "stem_length": 1.25 } }
-  ]
-}

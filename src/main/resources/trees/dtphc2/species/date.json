@@ -15,7 +15,7 @@
   },
   "seasonal_fruiting_offset": 1.5,
   "inherit_fruiting_offset_to_pods": true,
-  "perfect_biomes": { "types": [ "desert", "overworld" ] },
+  "perfect_biomes": { "tags": [ "#forge:is_desert", "#is_overworld" ] },
   "acceptable_soils": ["dirt_like", "sand_like"],
   "primitive_saplings": [
     { "sapling_block": "pamhc2trees:date_sapling" },

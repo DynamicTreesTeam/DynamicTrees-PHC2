@@ -13,6 +13,6 @@
     "cold": 0.8,
     "dry": 0.8
   },
-  "perfect_biomes": { "types": [ "swamp", "overworld" ] },
+  "perfect_biomes": { "tags": [ "#forge:is_swamp", "#is_overworld" ] },
   "primitive_sapling": "pamhc2trees:paperbark_sapling"
 }
