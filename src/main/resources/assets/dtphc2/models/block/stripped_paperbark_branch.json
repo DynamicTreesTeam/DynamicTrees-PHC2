@@ -1,7 +1,0 @@
-{
-    "loader": "dynamictrees:branch",
-    "textures": {
-        "bark": "dtphc2:block/branches/stripped_paperbark_log",
-        "rings": "dtphc2:block/branches/stripped_paperbark_log_top"
-    }
-}

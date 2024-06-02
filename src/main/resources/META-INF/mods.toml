@@ -32,7 +32,7 @@ Compatibility Mod between Dynamic Trees and Pam's HarvestCraft 2: Trees
 [[dependencies.dtphc2]]
     modId="dynamictrees"
     mandatory=true
-    versionRange="[1.1.0-BETA5,)"
+    versionRange="[1.2.0,)"
     ordering="AFTER"
     side="BOTH"
 

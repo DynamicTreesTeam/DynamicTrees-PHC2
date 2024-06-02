@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "age=0": { "model": "dtphc2:block/fruit/mesquite_age0" },
-        "age=1": { "model": "dtphc2:block/fruit/mesquite_age1" },
-        "age=2": { "model": "dtphc2:block/fruit/mesquite_age2" },
-        "age=3": { "model": "dtphc2:block/fruit/mesquite_age3" }
-    }
-}

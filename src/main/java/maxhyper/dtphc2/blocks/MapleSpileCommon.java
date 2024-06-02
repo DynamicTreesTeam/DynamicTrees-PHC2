@@ -108,7 +108,7 @@ public abstract class MapleSpileCommon extends HorizontalDirectionalBlock {
     public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
         BlockPos offsetPos = pos.relative(state.getValue(FACING).getOpposite());
         BlockState offsetState = world.getBlockState(offsetPos);
-        return TreeHelper.isBranch(offsetState) && TreeHelper.getRadius(world, pos) >= 7;
+        return TreeHelper.isBranch(offsetState) && TreeHelper.getRadius(world, offsetPos) >= 7;
     }
 
     @Override

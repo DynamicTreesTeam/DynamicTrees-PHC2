@@ -1,8 +1,0 @@
-{
-	"parent": "dynamictrees:block/smartmodel/sapling",
-	"textures": {
-	    "particle": "block/jungle_leaves",
-		"log": "pamhc2trees:block/paperbark_stage_0",
-		"leaves": "block/jungle_leaves"
-	}
-}

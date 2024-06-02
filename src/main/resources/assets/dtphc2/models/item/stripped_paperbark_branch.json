@@ -1,7 +1,0 @@
-{
-    "parent": "dynamictrees:item/branch",
-    "textures": {
-        "bark": "pamhc2trees:block/stripped_paperbark_log",
-        "rings": "pamhc2trees:block/stripped_paperbark_log_top"
-    }
-}

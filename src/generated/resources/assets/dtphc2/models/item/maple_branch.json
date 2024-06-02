@@ -1,0 +1,7 @@
+{
+  "parent": "dynamictrees:item/branch",
+  "textures": {
+    "bark": "dtphc2:block/branches/dripping_maple_log",
+    "rings": "minecraft:block/stripped_spruce_log_top"
+  }
+}

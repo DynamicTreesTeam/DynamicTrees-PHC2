@@ -1,0 +1,7 @@
+{
+  "loader": "dynamictrees:branch",
+  "textures": {
+    "bark": "dtphc2:block/branches/stripped_paperbark_log",
+    "rings": "minecraft:block/stripped_birch_log_top"
+  }
+}

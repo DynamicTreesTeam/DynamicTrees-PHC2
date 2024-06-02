@@ -3,5 +3,13 @@
   "common_species": "dtphc2:maple",
   "primitive_log": "pamhc2trees:pammaple",
   "primitive_stripped_log": "pamhc2trees:pammaple",
-  "max_branch_radius": 8
+  "max_branch_radius": 8,
+  "min_radius_for_stripping": 7,
+  "reduce_radius_when_stripping": false,
+  "texture_overrides": {
+    "branch": "dtphc2:block/branches/maple_log",
+    "branch_top": "block/spruce_log_top",
+    "stripped_branch": "dtphc2:block/branches/dripping_maple_log",
+    "stripped_branch_top": "block/stripped_spruce_log_top"
+  }
 }

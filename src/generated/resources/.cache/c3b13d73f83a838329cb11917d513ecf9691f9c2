@@ -1,4 +1,4 @@
-// 1.19.2	2024-05-30T22:40:22.3957482	dtphc2
+// 1.19.2	2024-06-01T12:11:04.178879	dtphc2
 7a6ac52dae5585766030f46e674bc91c2341fb9d data/dtphc2/loot_tables/blocks/acorn.json
 7b5383e43dcae9a17c91554b2052b2f244d6ce2a data/dtphc2/loot_tables/blocks/almond.json
 00e600828fe28e0cd0b8fe15b8395e4996a2185b data/dtphc2/loot_tables/blocks/apricot.json
@@ -10,7 +10,6 @@ bdc7247812898d6e5764e647426cb3e4fe4133d3 data/dtphc2/loot_tables/blocks/breadfru
 e86dc868d2d13535c9ef37dcf5128493a71487f6 data/dtphc2/loot_tables/blocks/cherry.json
 c09d106de22734773b62790d4255741ac802c97b data/dtphc2/loot_tables/blocks/chestnut.json
 ea93b40a1eb42f46fd17f712d601918007f7da2c data/dtphc2/loot_tables/blocks/coconut_leaves.json
-1995bdee9a41668377246a7c8f202df63620a1cc data/dtphc2/loot_tables/blocks/date.json
 ea93b40a1eb42f46fd17f712d601918007f7da2c data/dtphc2/loot_tables/blocks/date_leaves.json
 12d13fb3b865a7df0ca7f098c7c85acb8807734e data/dtphc2/loot_tables/blocks/dragon_fruit.json
 ea93b40a1eb42f46fd17f712d601918007f7da2c data/dtphc2/loot_tables/blocks/dragon_fruit_leaves.json
@@ -28,7 +27,6 @@ bf0a8f0d065ae39e4464024fdbe3b8665cec428b data/dtphc2/loot_tables/blocks/jackfrui
 4370fd323a563bbfcd221fc787f0341473968d8a data/dtphc2/loot_tables/blocks/nutmeg.json
 6bd1be6013fe81da8e9ce42e32031596d8044110 data/dtphc2/loot_tables/blocks/olive.json
 d9d9f085a08df9b95e17ab448f57dca7a0862a5f data/dtphc2/loot_tables/blocks/orange.json
-4748d786afd4de9feeed33baf59bf7d004932d28 data/dtphc2/loot_tables/blocks/papaya.json
 ea93b40a1eb42f46fd17f712d601918007f7da2c data/dtphc2/loot_tables/blocks/papaya_leaves.json
 67e13aa30c3805ab88b48c316e0ba0097530c49f data/dtphc2/loot_tables/blocks/pawpaw.json
 524bb2f1b220320b57ecb2b565572c90dab04b0e data/dtphc2/loot_tables/blocks/peach.json
@@ -48,7 +46,6 @@ eb5cbfb82ffd3af75f31207216a3cb3e277f8c6a data/dtphc2/loot_tables/blocks/soursop.
 5d62cf3f820635958ccaa171379fbf230c0b9ff4 data/dtphc2/loot_tables/trees/leaves/coconut.json
 5d62cf3f820635958ccaa171379fbf230c0b9ff4 data/dtphc2/loot_tables/trees/leaves/date.json
 5d62cf3f820635958ccaa171379fbf230c0b9ff4 data/dtphc2/loot_tables/trees/leaves/dragon_fruit.json
-986afb00ce7ce1ff4ba0d792936eed67cb913515 data/dtphc2/loot_tables/trees/leaves/eucalyptus.json
 986afb00ce7ce1ff4ba0d792936eed67cb913515 data/dtphc2/loot_tables/trees/leaves/maple.json
 5d62cf3f820635958ccaa171379fbf230c0b9ff4 data/dtphc2/loot_tables/trees/leaves/papaya.json
 986afb00ce7ce1ff4ba0d792936eed67cb913515 data/dtphc2/loot_tables/trees/leaves/paperbark.json
@@ -56,7 +53,6 @@ eb5cbfb82ffd3af75f31207216a3cb3e277f8c6a data/dtphc2/loot_tables/blocks/soursop.
 11d5db42ba121d043037295ed6a12f61ea66f6fb data/dtphc2/loot_tables/trees/voluntary/almond.json
 178753ed766253fc7b0b916c7b539a20fabb6771 data/dtphc2/loot_tables/trees/voluntary/apricot.json
 af56f2962487e5a96bffa76aa45b2dfcede9a2ca data/dtphc2/loot_tables/trees/voluntary/avocado.json
-6d05fc58d89358b5e11f57169a3ccfe991da9138 data/dtphc2/loot_tables/trees/voluntary/banana.json
 7e959e887a92b16e10b6ad12e041cb0869264907 data/dtphc2/loot_tables/trees/voluntary/breadfruit.json
 555d784d52e0b15186bd3a5ab13446e9438e71e7 data/dtphc2/loot_tables/trees/voluntary/candlenut.json
 652cf262f35fde6f070a56725cab2f9fcbfcf352 data/dtphc2/loot_tables/trees/voluntary/cashew.json

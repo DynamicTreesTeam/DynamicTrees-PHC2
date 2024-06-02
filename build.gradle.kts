@@ -27,6 +27,9 @@ repositories {
     }
     maven("https://harleyoconnor.com/maven")
     maven("https://squiddev.cc/maven/")
+    flatDir {
+        dir("libs")
+    }
 }
 
 val modName = property("modName")

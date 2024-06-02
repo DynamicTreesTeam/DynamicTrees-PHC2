@@ -3,5 +3,9 @@
   "common_species": "dtphc2:cinnamon",
   "primitive_log": "pamhc2trees:pamcinnamon",
   "generate_stripped_branch": false,
-  "max_branch_radius": 8
+  "max_branch_radius": 8,
+  "texture_overrides": {
+    "branch": "dtphc2:block/branches/cinnamon_log",
+    "branch_top": "block/jungle_log_top"
+  }
 }

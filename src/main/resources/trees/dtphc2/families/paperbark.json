@@ -4,5 +4,11 @@
   "common_species": "dtphc2:paperbark",
   "primitive_log": "pamhc2trees:pampaperbark",
   "primitive_stripped_log": "pamhc2trees:pampaperbark",
-  "max_branch_radius": 8
+  "max_branch_radius": 8,
+  "texture_overrides": {
+    "branch": "pamhc2trees:block/paperbark_stage_0",
+    "branch_top": "block/birch_log_top",
+    "stripped_branch": "dtphc2:block/branches/stripped_paperbark_log",
+    "stripped_branch_top": "block/stripped_birch_log_top"
+  }
 }
