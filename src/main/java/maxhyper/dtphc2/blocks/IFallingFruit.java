@@ -26,7 +26,7 @@ public interface IFallingFruit {
     int fallDamageMax = 40;
     float fallDamageAmount = 2.0F;
 
-    DamageSource getDamageSource();
+    DamageSource getDamageSource(Level level);
 
     default boolean checkToFall(BlockState state, Level world, BlockPos pos, RandomSource random){
         if (getAge(state) < getMaxAge()) return false;
@@ -62,14 +62,14 @@ public interface IFallingFruit {
             public boolean causeFallDamage(float pFallDistance, float pMultiplier, DamageSource pSource) {
                 int i = (int)Math.ceil(pFallDistance - 1.0F);
                 if (i > 0) {
-                    List<Entity> list = Lists.newArrayList(this.level.getEntities(this, this.getBoundingBox()));
+                    List<Entity> list = Lists.newArrayList(level().getEntities(this, this.getBoundingBox()));
                     for(Entity entity : list) {
                         if (entity instanceof LivingEntity){
-                            entity.hurt(getDamageSource(),
+                            entity.hurt(getDamageSource(level()),
                                     (float)Math.min(Math.floor((float)i * IFallingFruit.fallDamageAmount), IFallingFruit.fallDamageMax) * pMultiplier);
-                            level.playSound(null, pos,
-                                    DTPHC2Registries.FRUIT_BONK.get(), SoundSource.BLOCKS,
-                                    1.0F, 1.0F);
+//                            level().playSound(null, pos,
+//                                    DTPHC2Registries.FRUIT_BONK.get(), SoundSource.BLOCKS,
+//                                    1.0F, 1.0F);
                         }
                     }
                 }

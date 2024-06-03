@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -65,7 +65,7 @@ public abstract class MapleSpileCommon extends HorizontalDirectionalBlock {
     }
 
     public MapleSpileCommon() {
-        super(Properties.of(Material.METAL).sound(SoundType.METAL).strength(0.5f).randomTicks());
+        super(Properties.of().mapColor(MapColor.METAL).sound(SoundType.METAL).strength(0.5f).randomTicks());
     }
 
     protected abstract boolean giveSyrup(Level world, BlockPos pos, BlockState state, Player player, BlockPos treePos);

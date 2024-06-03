@@ -1,11 +1,13 @@
-import com.google.gson.Gson
-import com.google.gson.JsonObject
-import com.matthewprenger.cursegradle.*
-import java.io.InputStreamReader
+import com.matthewprenger.cursegradle.CurseArtifact
+import com.matthewprenger.cursegradle.CurseProject
+import com.matthewprenger.cursegradle.CurseRelation
 import java.time.Instant
 import java.time.format.DateTimeFormatter
 
 fun property(key: String) = project.findProperty(key).toString()
+fun optionalProperty(key: String) = project.findProperty(key)?.toString()
+
+apply(from = "https://gist.githubusercontent.com/Harleyoc1/4d23d4e991e868d98d548ac55832381e/raw/applesiliconfg.gradle")
 
 plugins {
     id("java")
@@ -13,23 +15,22 @@ plugins {
     id("org.parchmentmc.librarian.forgegradle")
     id("idea")
     id("maven-publish")
+    id("com.harleyoconnor.translationsheet") version "0.1.1"
     id("com.matthewprenger.cursegradle") version "1.4.0"
+    id("com.modrinth.minotaur") version "2.+"
+    id("com.harleyoconnor.autoupdatetool") version "1.0.9"
 }
 
 repositories {
-    maven("https://ldtteam.jfrog.io/ldtteam/modding/")
-    // TEMP FIX: TEHNUT MAVEN IS DOWN
-    //maven("https://maven.tehnut.info")
+    mavenCentral()
+    maven("https://ldtteam.jfrog.io/ldtteam/modding/") //patchouli
     maven("https://www.cursemaven.com") {
         content {
             includeGroup("curse.maven")
         }
     }
     maven("https://harleyoconnor.com/maven")
-    maven("https://squiddev.cc/maven/")
-    flatDir {
-        dir("libs")
-    }
+    maven("https://squiddev.cc/maven/") //cc-twekaed
 }
 
 val modName = property("modName")
@@ -41,8 +42,7 @@ version = "$mcVersion-$modVersion"
 group = property("group")
 
 minecraft {
-    mappings("parchment", "${property("mappingsVersion")}-$mcVersion")
-
+    mappings(property("mappingsChannel"), property("mappingsVersion"))
     accessTransformer(file("src/main/resources/META-INF/accesstransformer.cfg"))
 
     runs {
@@ -61,7 +61,7 @@ minecraft {
         }
 
         create("server") {
-            applyDefaultConfiguration()
+            applyDefaultConfiguration("run-server")
         }
 
         create("data") {
@@ -79,77 +79,48 @@ minecraft {
     }
 }
 
-fun net.minecraftforge.gradle.common.util.RunConfig.applyDefaultConfiguration(runDirectory: String = "run") {
-    workingDirectory = file(runDirectory).absolutePath
-
-    property("forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP")
-    property("forge.logging.console.level", "debug")
-
-    property("mixin.env.remapRefMap", "true")
-    property("mixin.env.refMapRemappingFile", "${buildDir}/createSrgToMcp/output.srg")
-
-    mods {
-        create(modId) {
-            source(sourceSets.main.get())
-        }
-    }
-}
-
 sourceSets.main.get().resources {
     srcDir("src/generated/resources")
+    srcDir("src/localization/resources")
 }
 
 dependencies {
-    // Not sure if we need this one, what is a "forge" anyway?
-    minecraft("net.minecraftforge:forge:${mcVersion}-${property("forgeVersion")}")
+    minecraft("net.minecraftforge:forge:$mcVersion-${property("forgeVersion")}")
 
-    // Compile PHC and DT, of course.
-    implementation(fg.deobf("curse.maven:pams-harvestcraft-2-trees-365460:4480280"))
     implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
-
-    // Compile Jade, but don't include in runtime.
-    compileOnly(fg.deobf("curse.maven:Jade-324717:4433884"))
-
-    // DT+ is optional, but it's implemented as there is access to its classes and needs to be compiled.
+    implementation(fg.deobf("curse.maven:pams-harvestcraft-2-trees-365460:4625518"))
     implementation(fg.deobf("com.ferreusveritas.dynamictreesplus:DynamicTreesPlus-$mcVersion:${property("dynamicTreesPlusVersion")}"))
+    implementation(fg.deobf("curse.maven:jade-324717:${property("jadeVersion")}"))
 
-    /////////////////////////////////////////
-    /// Runtime Dependencies (optional)
-    /////////////////////////////////////////
+    runtimeOnly(fg.deobf("curse.maven:pams-harvestcraft-2-food-core-372534:5097798"))
+    runtimeOnly(fg.deobf("curse.maven:pams-harvestcraft-2-crops-361385:4687624"))
+    runtimeOnly(fg.deobf("curse.maven:pams-harvestcraft-2-food-extended-402231:5147171"))
 
-    // At runtime, use the full Jade mod.
-    runtimeOnly(fg.deobf("curse.maven:Jade-324717:4433884"))
+    runtimeOnly(fg.deobf("mezz.jei:jei-$mcVersion-forge:${property("jeiVersion")}"))
+    runtimeOnly(fg.deobf("curse.maven:SereneSeasons-291874:${property("ssVersion")}"))
+    runtimeOnly(fg.deobf("vazkii.patchouli:Patchouli:${property("patchouliVersion")}"))
 
-    // At runtime, use the full JEI mod.
-    // TEMP FIX: TEHNUT MAVEN IS DOWN
-    runtimeOnly(fg.deobf("curse.maven:jei-238222:4615177"))
-    //runtimeOnly(fg.deobf("mezz.jei:jei-$mcVersion:${property("jeiVersion")}"))
+    runtimeOnly(fg.deobf("cc.tweaked:cc-tweaked-$mcVersion-core:${property("ccVersion")}"))
+    runtimeOnly(fg.deobf("cc.tweaked:cc-tweaked-$mcVersion-forge:${property("ccVersion")}"))
 
-    // At runtime, use CC for creating growth chambers.
-    runtimeOnly(fg.deobf("org.squiddev:cc-tweaked-$mcVersion:${property("ccVersion")}"))
+}
 
-    // At runtime, get rid of experimental settings warning screen.
-    runtimeOnly(fg.deobf("curse.maven:ShutUpExperimentalSettings-407174:3759881"))
-
-    // At runtime use serene seasons to test seasonal mechanics
-    runtimeOnly(fg.deobf("curse.maven:SereneSeasons-291874:4037228"))
-
-    // At runtime, use suggestion provider fix mod.
-    runtimeOnly(fg.deobf("com.harleyoconnor.suggestionproviderfix:SuggestionProviderFix-1.19:${property("suggestionProviderFixVersion")}"))
-
-    // If needed, include Cyanide mod to get more info about datapack errors
-    runtimeOnly(fg.deobf("curse.maven:Cyanide-541676:4126944"))
-
+translationSheet {
+    sheetId.set("1xjxEh2NdbeV_tQc6fDHPgcRmtchqCZJKt--6oifq1qc")
+    sectionColour.set(0xF9CB9C)
+    sectionPattern.set("Dynamic Trees PHC2")
+    outputDirectory.set(file("src/localization/resources/assets/dtphc2/lang/"))
+    useJson()
 }
 
 tasks.jar {
     manifest.attributes(
         "Specification-Title" to project.name,
-        "Specification-Vendor" to "Max Hyper",
+        "Specification-Vendor" to "ferreusveritas",
         "Specification-Version" to "1",
         "Implementation-Title" to project.name,
         "Implementation-Version" to project.version,
-        "Implementation-Vendor" to "Max Hyper",
+        "Implementation-Vendor" to "ferreusveritas",
         "Implementation-Timestamp" to DateTimeFormatter.ISO_INSTANT.format(Instant.now())
     )
 
@@ -165,47 +136,51 @@ java {
     }
 }
 
-fun readChangelog(): String? {
-    val versionInfoFile = file("version_info.json")
-    val jsonObject = Gson().fromJson(InputStreamReader(versionInfoFile.inputStream()), JsonObject::class.java)
-    return jsonObject
-        .get(mcVersion)?.asJsonObject
-        ?.get(project.version.toString())?.asString
-}
+val changelogFile = file("temp/changelog.txt")
 
-fun enablePublishing() =
-    project.hasProperty("curseApiKey") && project.hasProperty("curseFileType") && project.hasProperty("projectId")
+curseforge {
+    val curseApiKey = optionalProperty("curseApiKey") ?: System.getenv("CURSEFORGE_API_KEY")
+    if (curseApiKey == null) {
+        project.logger.warn("API Key for CurseForge not detected; uploading will be disabled.")
+        return@curseforge
+    }
 
-tasks.withType(CurseUploadTask::class.java) {
-    onlyIf {
-        enablePublishing()
+    apiKey = curseApiKey
+
+    project {
+        id = "839090"
+
+        addGameVersion(mcVersion)
+
+        changelog = changelogFile
+        changelogType = "markdown"
+        releaseType = optionalProperty("versionType") ?: "release"
+
+        addArtifact(tasks.findByName("sourcesJar"))
+
+        mainArtifact(tasks.findByName("jar")) {
+            relations {
+                optionalDependency("dynamictreesplus")
+            }
+        }
     }
 }
 
-curseforge {
-    if (project.hasProperty("curseApiKey") && project.hasProperty("curseFileType")) {
-        apiKey = property("curseApiKey")
+modrinth {
+    val modrinthToken = optionalProperty("modrinthToken") ?: System.getenv("MODRINTH_TOKEN")
+    if (modrinthToken == null) {
+        project.logger.warn("Token for Modrinth not detected; uploading will be disabled.")
+        return@modrinth
+    }
 
-        project {
-            id = property("curseProjectId")
-
-            addGameVersion(mcVersion)
-
-            changelog = file("build/changelog.txt")
-            changelogType = "markdown"
-            releaseType = property("curseFileType")
-
-            addArtifact(tasks.findByName("sourcesJar"))
-
-            mainArtifact(tasks.findByName("jar")) {
-                relations {
-                    requiredDependency("dynamictrees")
-                    requiredDependency("pams-harvestcraft-2-trees")
-                }
-            }
-        }
-    } else {
-        project.logger.log(LogLevel.WARN, "API Key and file type for CurseForge not detected; uploading will be disabled.")
+    token.set(modrinthToken)
+    projectId.set(modId)
+    versionNumber.set("$mcVersion-$modVersion")
+    versionType.set(optionalProperty("versionType") ?: "release")
+    uploadFile.set(tasks.jar.get())
+    gameVersions.add(mcVersion)
+    if (changelogFile.exists()) {
+        changelog.set(changelogFile.readText())
     }
 }
 
@@ -223,17 +198,23 @@ publishing {
 
             pom {
                 name.set(modName)
-                url.set("https://github.com/supermassimo/$modName")
+                url.set("https://github.com/DynamicTreesTeam/$modName")
                 licenses {
                     license {
                         name.set("MIT")
                         url.set("https://mit-license.org")
                     }
                 }
+                developers {
+                    developer {
+                        id.set("supermassimo")
+                        name.set("Max Hyper")
+                    }
+                }
                 scm {
-                    connection.set("scm:git:git://github.com/supermassimo/$modName.git")
-                    developerConnection.set("scm:git:ssh://github.com/supermassimo/$modName.git")
-                    url.set("https://github.com/supermassimo/$modName")
+                    connection.set("scm:git:git://github.com/DynamicTreesTeam/$modName.git")
+                    developerConnection.set("scm:git:ssh://github.com/DynamicTreesTeam/$modName.git")
+                    url.set("https://github.com/DynamicTreesTeam/$modName")
                 }
             }
 
@@ -252,23 +233,54 @@ publishing {
     }
     repositories {
         maven("file:///${project.projectDir}/mcmodsrepo")
-        if (hasProperty("harleyOConnorMavenUsername") && hasProperty("harleyOConnorMavenPassword")) {
-            maven("https://harleyoconnor.com/maven") {
-                name = "HarleyOConnor"
-                credentials {
-                    username = property("harleyOConnorMavenUsername")
-                    password = property("harleyOConnorMavenPassword")
-                }
+        val mavenUsername = optionalProperty("harleyOConnorMavenUsername") ?: System.getenv("MAVEN_USERNAME")
+        val mavenPassword = optionalProperty("harleyOConnorMavenPassword") ?: System.getenv("MAVEN_PASSWORD")
+        if (mavenUsername == null || mavenPassword == null) {
+            logger.warn("Credentials for maven not detected; it will be disabled.")
+            return@repositories
+        }
+        maven("https://harleyoconnor.com/maven") {
+            name = "HarleyOConnor"
+            credentials {
+                username = mavenUsername
+                password = mavenPassword
             }
-        } else {
-            logger.log(LogLevel.WARN, "Credentials for maven not detected; it will be disabled.")
         }
     }
 }
 
-// Extensions to make CurseGradle extension slightly neater.
+autoUpdateTool {
+    minecraftVersion.set(mcVersion)
+    version.set(modVersion)
+    versionRecommended.set(property("versionRecommended") == "true")
+    changelogOutputFile.set(changelogFile)
+    updateCheckerFile.set(file("temp/version_info.json"))
+}
 
-fun CurseExtension.project(action: CurseProject.() -> Unit) {
+tasks.autoUpdate {
+    doLast {
+        modrinth.changelog.set(changelogFile.readText())
+    }
+    finalizedBy("publishMavenJavaPublicationToHarleyOConnorRepository", "curseforge", "modrinth")
+}
+
+fun net.minecraftforge.gradle.common.util.RunConfig.applyDefaultConfiguration(runDirectory: String = "run") {
+    workingDirectory = file(runDirectory).absolutePath
+
+    property("forge.logging.markers", "REGISTRIES,REGISTRYDUMP")
+    property("forge.logging.console.level", "debug")
+
+    property("mixin.env.remapRefMap", "true")
+    property("mixin.env.refMapRemappingFile", "${buildDir}/createSrgToMcp/output.srg")
+
+    mods {
+        create(modId) {
+            source(sourceSets.main.get())
+        }
+    }
+}
+
+fun com.matthewprenger.cursegradle.CurseExtension.project(action: CurseProject.() -> Unit) {
     this.project(closureOf(action))
 }
 

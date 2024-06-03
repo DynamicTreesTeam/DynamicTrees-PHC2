@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -39,7 +39,7 @@ public class BananaSuckerBlock extends HorizontalDirectionalBlock implements IPl
             10 /16f,15 /16f,4 /16f);
 
     public BananaSuckerBlock() {
-        super(Properties.of(Material.LEAVES).sound(SoundType.GRASS));
+        super(Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS));
     }
 
     @Override

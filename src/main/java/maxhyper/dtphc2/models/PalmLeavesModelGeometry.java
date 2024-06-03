@@ -30,18 +30,18 @@ public class PalmLeavesModelGeometry implements IUnbakedGeometry<PalmLeavesModel
         this.frondType = type;
     }
 
+//    @Override
+//    public Collection<Material> getMaterials(IGeometryBakingContext owner, Function<ResourceLocation, UnbakedModel> modelGetter, Set<Pair<String, String>> missingTextureErrors) {
+//        if (frondsResLoc == null) return new HashSet<>();
+//        return Collections.singleton(new Material(TextureAtlas.LOCATION_BLOCKS, frondsResLoc));
+//    }
+
     @Override
-    public BakedModel bake(IGeometryBakingContext owner, ModelBakery bakery, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelTransform, ItemOverrides overrides, ResourceLocation modelLocation) {
+    public BakedModel bake(IGeometryBakingContext context, ModelBaker baker, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelState, ItemOverrides overrides, ResourceLocation modelLocation) {
         return switch (frondType) {
             default -> new LargePalmLeavesBakedModel(modelLocation, frondsResLoc);
             case 1 -> new MediumPalmLeavesBakedModel(modelLocation, frondsResLoc);
             case 2 -> new SmallPalmLeavesBakedModel(modelLocation, frondsResLoc);
         };
-    }
-
-    @Override
-    public Collection<Material> getMaterials(IGeometryBakingContext owner, Function<ResourceLocation, UnbakedModel> modelGetter, Set<Pair<String, String>> missingTextureErrors) {
-        if (frondsResLoc == null) return new HashSet<>();
-        return Collections.singleton(new Material(TextureAtlas.LOCATION_BLOCKS, frondsResLoc));
     }
 }

@@ -4,8 +4,6 @@ import com.ferreusveritas.dynamictrees.api.TreeHelper;
 import maxhyper.dtphc2.init.DTPHC2Blocks;
 import maxhyper.dtphc2.init.DTPHC2Registries;
 import net.minecraft.core.BlockPos;
-import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -45,9 +43,8 @@ public class SpilePlacementEvent {
         if (!TreeHelper.isBranch(state) || TreeHelper.getRadius(world, pos) < 7) return;
 
         BlockPos spilePos = pos.relative(Objects.requireNonNull(event.getFace()));
-        if (!world.getBlockState(spilePos).getMaterial().isReplaceable()) return;
-        //Make sure the tree species has the syrup gen feature
-        //TODO
+        if (!world.getBlockState(spilePos).canBeReplaced()) return;
+
         if(state.is(DTPHC2Registries.CAN_BE_SPILED)){
             // Remove one item from the player's hand
             if (!player.isCreative()) heldItem.shrink(1);

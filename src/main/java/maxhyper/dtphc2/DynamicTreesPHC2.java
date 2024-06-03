@@ -52,7 +52,7 @@ public class DynamicTreesPHC2 {
         DTPHC2Blocks.register(bus);
         DTPHC2Items.register(bus);
         DTPHC2Registries.setup();
-        DTPHC2Registries.SOUNDS.register(bus);
+        //DTPHC2Registries.SOUNDS.register(bus);
 
         if (ModList.get().isLoaded("dynamictreesplus"))
             DTPlusConfig = new DTPConfig();

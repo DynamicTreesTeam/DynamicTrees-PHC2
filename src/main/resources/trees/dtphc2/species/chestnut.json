@@ -37,7 +37,7 @@
     {
       "name": "roots",
       "properties": {
-        "min_trunk_radius": "8"
+        "min_trunk_radius": 8
       }
     },
     "bottom_flare",

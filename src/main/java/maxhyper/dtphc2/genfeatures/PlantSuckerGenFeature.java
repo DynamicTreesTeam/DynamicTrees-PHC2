@@ -62,7 +62,7 @@ public class PlantSuckerGenFeature extends GenFeature {
         for (int i=0; i < 3; i++){
             BlockPos testPos = pos.offset(0, i,0);
             if (world.isAreaLoaded(testPos, 16) &&
-                    world.getBlockState(testPos).getMaterial().isReplaceable() &&
+                    world.getBlockState(testPos).canBeReplaced() &&
                     world.getBlockState(testPos.below()).isFaceSturdy(world, pos, Direction.UP)){
                 return testPos;
             }

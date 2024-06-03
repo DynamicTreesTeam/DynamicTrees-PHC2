@@ -64,7 +64,7 @@ public class VinesInTrunkGenFeature extends GenFeature {
                 state = state.setValue(VineBlock.UP, true);
             if (state.hasProperty(FruitVineBlock.ageProperty) && rand.nextFloat() < configuration.get(PLACE_FRUIT_CHANCE))
                 state = state.setValue(FruitVineBlock.ageProperty, 1 + rand.nextInt(FruitVineBlock.maxAge - 1));
-            if (world.getBlockState(current).getMaterial().isReplaceable() && TreeHelper.isBranch(world.getBlockState(current.offset(direction.getOpposite().getNormal())))){
+            if (world.getBlockState(current).canBeReplaced() && TreeHelper.isBranch(world.getBlockState(current.offset(direction.getOpposite().getNormal())))){
                 world.setBlock(current, state, 0);
             }
         }

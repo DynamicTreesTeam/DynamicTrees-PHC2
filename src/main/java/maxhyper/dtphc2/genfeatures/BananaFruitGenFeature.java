@@ -42,7 +42,7 @@ public class BananaFruitGenFeature extends PalmFruitGenFeature {
         LevelAccessor acc = world.accessor();
         Direction placeDir = CoordUtils.HORIZONTALS[acc.getRandom().nextInt(4)];
         BlockPos pos = expandRandom(configuration, acc, leavesPos.offset(placeDir.getNormal()));
-        if (acc.getBlockState(pos).getMaterial().isReplaceable()) {
+        if (acc.getBlockState(pos).canBeReplaced()) {
             Float seasonValue = SeasonHelper.getSeasonValue(world, rootPos);
             Fruit fruit = configuration.get(FRUIT);
             if (worldGen) {

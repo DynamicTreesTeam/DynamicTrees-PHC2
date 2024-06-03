@@ -9,6 +9,8 @@ import net.minecraft.network.protocol.game.DebugPackets;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageSources;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
@@ -21,14 +23,15 @@ import java.util.List;
 
 public class FallingFruitBlock extends FruitBlock implements IFallingFruit {
 
-    DamageSource damageSource;
+    //DamageSource damageSource;
 
     public static float randomFruitFallChance = 0.005f;
     public static float playerDistanceToFall = 10f;
 
     public FallingFruitBlock(Properties properties, Fruit fruit) {
         super(properties, fruit);
-        damageSource = new DamageSource(DynamicTreesPHC2.MOD_ID+".falling_fruit."+ fruit.getRegistryName().getPath());
+        //damageSource = new DamageSource(DamageTypes.FALL)
+                //new DamageSource(DynamicTreesPHC2.MOD_ID+".falling_fruit."+ fruit.getRegistryName().getPath());
     }
 
     @Override
@@ -51,15 +54,16 @@ public class FallingFruitBlock extends FruitBlock implements IFallingFruit {
     @Override
     public ItemStack getDropOnFallItems(ItemLike item, @Nonnull FallingBlockEntity entity) {
         if (entity.getServer() == null) return ItemStack.EMPTY;
-        ServerLevel world = entity.getServer().getLevel(entity.level.dimension());
+        ServerLevel world = entity.getServer().getLevel(entity.level().dimension());
         if (world == null) return ItemStack.EMPTY;
         List<ItemStack> items = getDrops(entity.getBlockState(), world, entity.blockPosition(), null);
         return items.isEmpty() ? ItemStack.EMPTY : items.get(0);
     }
 
     @Override
-    public DamageSource getDamageSource() {
-        return damageSource;
+    public DamageSource getDamageSource(Level level) {
+        return level.damageSources().fallingBlock(null);
+        //return damageSource;
     }
 
     @Override

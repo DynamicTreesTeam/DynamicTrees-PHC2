@@ -26,14 +26,14 @@ import java.util.List;
 
 public class FallingPodBlock extends PodBlock implements IFallingFruit {
 
-    DamageSource damageSource;
+    //DamageSource damageSource;
 
     public static float randomFruitFallChance = 0.005f;
     public static float playerDistanceToFall = 10f;
 
     public FallingPodBlock(Properties properties, Pod pod) {
         super(properties, pod);
-        damageSource = new DamageSource(DynamicTreesPHC2.MOD_ID+".falling_fruit."+ pod.getRegistryName().getPath());
+        //damageSource = new DamageSource(DynamicTreesPHC2.MOD_ID+".falling_fruit."+ pod.getRegistryName().getPath());
     }
 
     @Override
@@ -62,8 +62,9 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
     }
 
     @Override
-    public DamageSource getDamageSource() {
-        return damageSource;
+    public DamageSource getDamageSource(Level level) {
+        return level.damageSources().fallingBlock(null);
+        //return damageSource;
     }
 
     @Override
@@ -81,7 +82,7 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
     @Override
     public ItemStack getDropOnFallItems(ItemLike item, @Nonnull FallingBlockEntity entity) {
         if (entity.getServer() == null) return ItemStack.EMPTY;
-        ServerLevel level = entity.getServer().getLevel(entity.level.dimension());
+        ServerLevel level = entity.getServer().getLevel(entity.level().dimension());
         if (level == null) return ItemStack.EMPTY;
         List<ItemStack> drops = getDrops(entity.getBlockState(), level, entity.blockPosition(), null);
         if (drops.isEmpty()) return ItemStack.EMPTY;
