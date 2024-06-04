@@ -67,9 +67,9 @@ public interface IFallingFruit {
                         if (entity instanceof LivingEntity){
                             entity.hurt(getDamageSource(level()),
                                     (float)Math.min(Math.floor((float)i * IFallingFruit.fallDamageAmount), IFallingFruit.fallDamageMax) * pMultiplier);
-//                            level().playSound(null, pos,
-//                                    DTPHC2Registries.FRUIT_BONK.get(), SoundSource.BLOCKS,
-//                                    1.0F, 1.0F);
+                            level().playSound(null, pos,
+                                    DTPHC2Registries.FRUIT_BONK.get(), SoundSource.BLOCKS,
+                                    1.0F, 1.0F);
                         }
                     }
                 }

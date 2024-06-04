@@ -1,8 +1,8 @@
 {
-  "type": "dynamictrees:branches",
+  "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -16,10 +16,11 @@
           ],
           "name": "minecraft:jungle_log"
         }
-      ]
+      ],
+      "rolls": 1.0
     },
     {
-      "rolls": 1,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -33,7 +34,9 @@
           ],
           "name": "minecraft:stick"
         }
-      ]
+      ],
+      "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "dtphc2:trees/branches/dragon_fruit"
 }

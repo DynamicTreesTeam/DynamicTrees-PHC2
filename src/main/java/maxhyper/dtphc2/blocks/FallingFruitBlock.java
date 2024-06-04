@@ -5,11 +5,13 @@ import com.ferreusveritas.dynamictrees.block.rooty.RootyBlock;
 import com.ferreusveritas.dynamictrees.systems.fruit.Fruit;
 import maxhyper.dtphc2.DynamicTreesPHC2;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.network.protocol.game.DebugPackets;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageSources;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.ItemStack;
@@ -23,15 +25,15 @@ import java.util.List;
 
 public class FallingFruitBlock extends FruitBlock implements IFallingFruit {
 
-    //DamageSource damageSource;
+    DamageSource damageSource;
 
     public static float randomFruitFallChance = 0.005f;
     public static float playerDistanceToFall = 10f;
 
     public FallingFruitBlock(Properties properties, Fruit fruit) {
         super(properties, fruit);
-        //damageSource = new DamageSource(DamageTypes.FALL)
-                //new DamageSource(DynamicTreesPHC2.MOD_ID+".falling_fruit."+ fruit.getRegistryName().getPath());
+        DamageType damageType = new DamageType(DynamicTreesPHC2.MOD_ID+".falling_fruit."+ fruit.getRegistryName().getPath(), 1F);
+        damageSource = new DamageSource(Holder.direct(damageType));
     }
 
     @Override
@@ -62,8 +64,7 @@ public class FallingFruitBlock extends FruitBlock implements IFallingFruit {
 
     @Override
     public DamageSource getDamageSource(Level level) {
-        return level.damageSources().fallingBlock(null);
-        //return damageSource;
+        return damageSource;
     }
 
     @Override

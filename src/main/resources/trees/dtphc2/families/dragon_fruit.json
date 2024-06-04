@@ -2,6 +2,7 @@
   "common_leaves": "dtphc2:dragon_fruit",
   "common_species": "dtphc2:dragon_fruit",
   "primitive_log": "jungle_log",
+  "generate_stripped_branch": false,
   "max_branch_radius": 8,
   "primary_thickness": 3,
   "secondary_thickness": 3

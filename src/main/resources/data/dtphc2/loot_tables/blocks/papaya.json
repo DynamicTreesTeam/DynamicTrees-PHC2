@@ -6,13 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
+          "functions": [
             {
-              "block": "dtphc2:papaya",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "age": "3"
-              }
+              "add": false,
+              "conditions": [
+                {
+                  "block": "dtphc2:papaya",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "age": "3"
+                  }
+                }
+              ],
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
             }
           ],
           "name": "pamhc2trees:papayaitem"
@@ -20,5 +30,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "dtphc2:blocks/papaya"
 }

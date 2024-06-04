@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "dynamictrees:oak_acorn",
-    "dynamictrees:dark_oak_acorn",
-    "dtphc2:infested_oak_acorn"
+    "dynamictrees:oak_seed",
+    "dynamictrees:dark_oak_seed",
+    "dtphc2:spiderweb_seed"
   ]
 }

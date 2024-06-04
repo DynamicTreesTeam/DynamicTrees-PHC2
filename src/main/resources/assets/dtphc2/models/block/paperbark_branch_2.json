@@ -2,6 +2,6 @@
     "loader": "dynamictrees:branch",
     "textures": {
         "bark": "pamhc2trees:block/paperbark_stage_2",
-        "rings": "dtphc2:block/branches/paperbark_log_top"
+        "rings": "block/birch_log_top"
     }
 }

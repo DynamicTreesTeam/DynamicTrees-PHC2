@@ -18,8 +18,7 @@
     { "sapling_block": "pamhc2trees:nutmeg_sapling" },
     {
       "sapling_item": "pamhc2trees:nutmegitem",
-      "can_craft_seed_to_sapling": false,
-      "sapling_to_seed_extra_ingredient": "bone_meal"
+      "can_craft_seed_to_sapling": false
     }
   ],
   "fruits": [
