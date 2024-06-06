@@ -127,15 +127,15 @@
           "dtphc2:almond": 2,
           "dtphc2:apricot": 2,
           "dtphc2:banana": 3,
-          "dtphc2:dragonfruit": 4,
+          "dtphc2:dragon_fruit": 2,
           "dtphc2:papaya": 3,
           "dtphc2:starfruit": 2,
           "dtphc2:breadfruit": 2,
           "dtphc2:guava": 2,
           "dtphc2:jackfruit": 2,
           "dtphc2:tamarind": 2,
-          "dtphc2:vine_passion_fruit": 4,
-          "dtphc2:vine_vanilla": 4,
+          "dtphc2:vine_passion_fruit": 3,
+          "dtphc2:vine_vanilla": 3,
           "dtphc2:date": 1,
           "dtphc2:mango": 1
         }
