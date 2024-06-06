@@ -78,13 +78,13 @@ public interface IFallingFruit {
 
             @Nullable
             @Override
-            public ItemEntity spawnAtLocation(@Nonnull ItemLike pItem) {
-                return null;
+            public ItemEntity spawnAtLocation(@Nonnull ItemStack pStack, float pOffsetY) {
+                return super.spawnAtLocation(getDropOnFallItems( this), pOffsetY);
             }
         };
     }
 
-    ItemStack getDropOnFallItems(ItemLike item, FallingBlockEntity entity);
+    ItemStack getDropOnFallItems(FallingBlockEntity entity);
     float getRandomFruitFallChance ();
     float getPlayerDistanceToFall();
     int getAge(BlockState state);

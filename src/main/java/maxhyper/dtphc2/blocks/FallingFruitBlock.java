@@ -54,7 +54,7 @@ public class FallingFruitBlock extends FruitBlock implements IFallingFruit {
     }
 
     @Override
-    public ItemStack getDropOnFallItems(ItemLike item, @Nonnull FallingBlockEntity entity) {
+    public ItemStack getDropOnFallItems(@Nonnull FallingBlockEntity entity) {
         if (entity.getServer() == null) return ItemStack.EMPTY;
         ServerLevel world = entity.getServer().getLevel(entity.level().dimension());
         if (world == null) return ItemStack.EMPTY;

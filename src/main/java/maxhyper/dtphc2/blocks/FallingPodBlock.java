@@ -82,7 +82,7 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
     }
 
     @Override
-    public ItemStack getDropOnFallItems(ItemLike item, @Nonnull FallingBlockEntity entity) {
+    public ItemStack getDropOnFallItems(@Nonnull FallingBlockEntity entity) {
         if (entity.getServer() == null) return ItemStack.EMPTY;
         ServerLevel level = entity.getServer().getLevel(entity.level().dimension());
         if (level == null) return ItemStack.EMPTY;
