@@ -1,0 +1,6 @@
+{
+  "loader": "dynamictrees:small_palm_fronds",
+  "textures": {
+    "frond": "dtphc2:block/palm_leaves/dragon_fruit_frond"
+  }
+}

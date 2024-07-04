@@ -1,5 +1,10 @@
 {
   "type": "dynamictrees:palm",
   "primitive_leaves": "jungle_leaves",
-  "cell_kit": "dynamictrees:palm"
+  "cell_kit": "dynamictrees:palm",
+  "frond_model_loader": "dynamictrees:large_palm_fronds",
+  "texture_overrides": {
+    "frond": "dtphc2:block/palm_leaves/coconut_frond",
+    "core_bottom": "dtphc2:block/palm_leaves/coconut_base"
+  }
 }

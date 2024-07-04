@@ -5,5 +5,7 @@
     { "function": "fruit", "parameters": { "radius": 1, "height": 2, "stem_length": 0, "fraction": 16 } },
     { "function": "fruit", "parameters": { "radius": 2, "height": 5, "stem_length": 0 } },
     { "function": "fruit", "parameters": { "radius": 2, "height": 5, "stem_length": 1.25 } }
-  ]
+  ],
+  "min_drop_count": 1,
+  "max_drop_count": 3
 }

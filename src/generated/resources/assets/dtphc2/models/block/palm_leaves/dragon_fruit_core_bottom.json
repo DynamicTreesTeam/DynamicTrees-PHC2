@@ -1,0 +1,6 @@
+{
+  "parent": "dtphc2:block/smartmodel/dragon_fruit_core_bottom",
+  "textures": {
+    "core_bottom": "dtphc2:block/palm_leaves/dragon_fruit_base"
+  }
+}

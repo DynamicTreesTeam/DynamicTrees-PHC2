@@ -2,5 +2,13 @@
   "type": "dtphc2:dragon_fruit",
   "primitive_leaves": "jungle_leaves",
   "cell_kit": "dynamictrees:palm",
-  "color": "@birch"
+  "color": "@birch",
+  "frond_model_loader": "dynamictrees:small_palm_fronds",
+  "texture_overrides": {
+    "frond": "dtphc2:block/palm_leaves/dragon_fruit_frond",
+    "core_bottom": "dtphc2:block/palm_leaves/dragon_fruit_base"
+  },
+  "model_overrides": {
+    "core_bottom": "dtphc2:block/smartmodel/dragon_fruit_core_bottom"
+  }
 }

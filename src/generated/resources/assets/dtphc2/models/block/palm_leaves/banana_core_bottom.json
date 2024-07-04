@@ -1,0 +1,6 @@
+{
+  "parent": "dtphc2:block/smartmodel/banana_core_bottom",
+  "textures": {
+    "core_bottom": "dtphc2:block/palm_leaves/banana_base"
+  }
+}
