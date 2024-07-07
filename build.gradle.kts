@@ -90,7 +90,7 @@ sourceSets.main.get().resources {
 dependencies {
     minecraft("net.minecraftforge:forge:$mcVersion-${property("forgeVersion")}")
 
-    implementation(fg.deobf("libs:DynamicTrees:1.20.1-1.3.0-BETA9.005"))
+    implementation(fg.deobf("libs:DynamicTrees:1.20.1-1.3.0-BETA10.007"))
     //implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
     implementation(fg.deobf("curse.maven:pams-harvestcraft-2-trees-365460:4625518"))
     implementation(fg.deobf("com.ferreusveritas.dynamictreesplus:DynamicTreesPlus-$mcVersion:${property("dynamicTreesPlusVersion")}"))

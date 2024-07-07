@@ -1,5 +1,5 @@
 {
-  "parent": "dynamictrees:block/smartmodel/palm/core_top",
+  "parent": "dtphc2:block/smartmodel/dragon_fruit_core_top",
   "textures": {
     "frond": "dtphc2:block/palm_leaves/dragon_fruit_frond"
   }

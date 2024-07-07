@@ -9,6 +9,7 @@
     "core_bottom": "dtphc2:block/palm_leaves/dragon_fruit_base"
   },
   "model_overrides": {
+    "core_top": "dtphc2:block/smartmodel/dragon_fruit_core_top",
     "core_bottom": "dtphc2:block/smartmodel/dragon_fruit_core_bottom"
   }
 }

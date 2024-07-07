@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-04T14:19:02.7308212	Block States: dtphc2
+// 1.20.1	2024-07-06T21:36:54.1161626	Block States: dtphc2
 22db7ddad9ff365268b8f9d2ddbbb5ae49f1a9bd assets/dtphc2/blockstates/almond_sapling.json
 27c9e91693631fa8a1b85f84a763f066c84f3a48 assets/dtphc2/blockstates/apricot_sapling.json
 fa152d2f2ca56f8590b5aad432ae8a06e9fcb695 assets/dtphc2/blockstates/avocado_sapling.json
@@ -74,7 +74,7 @@ f09b1e5c4210927c78f925d56fba0ebf08e2edf3 assets/dtphc2/models/block/palm_leaves/
 975af14a3ec7f7ad04ab1383db440ae9cd7dc178 assets/dtphc2/models/block/palm_leaves/date_core_top.json
 9bdc7222026fac9770f815b7dab40270ce740ea5 assets/dtphc2/models/block/palm_leaves/date_frond.json
 159ee9d0f4f8a4d02d058c26d8836145d54b07c3 assets/dtphc2/models/block/palm_leaves/dragon_fruit_core_bottom.json
-033f7109c5a041e45e9f8883649e070cc2361284 assets/dtphc2/models/block/palm_leaves/dragon_fruit_core_top.json
+293aa5505e72f0b50ae09e4ea16bf9413495261f assets/dtphc2/models/block/palm_leaves/dragon_fruit_core_top.json
 b164322dc2f4d39fb6078aad4c5e15b700cbbc90 assets/dtphc2/models/block/palm_leaves/dragon_fruit_frond.json
 e3fbc04ffbd6975b28f11f632bbec6a9eb106697 assets/dtphc2/models/block/palm_leaves/papaya_core_bottom.json
 b55dc995ef97788254e507eafa916bebcc302a6b assets/dtphc2/models/block/palm_leaves/papaya_core_top.json
