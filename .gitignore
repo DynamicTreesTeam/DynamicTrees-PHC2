@@ -20,5 +20,8 @@ build
 # other
 eclipse
 run
-libs
-/run-server
+runs
+run-data
+
+repo
+/libs

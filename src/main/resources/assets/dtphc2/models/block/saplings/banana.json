@@ -1,5 +1,6 @@
 {
   "credit": "Made with Blockbench",
+  "render_type": "minecraft:cutout_mipped",
   "ambientocclusion": false,
   "textures": {
     "particle": "dtphc2:block/palm_leaves/banana_frond",

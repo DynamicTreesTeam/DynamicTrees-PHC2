@@ -1,8 +1,8 @@
 package maxhyper.dtphc2.blocks;
 
-import com.ferreusveritas.dynamictrees.block.FruitBlock;
-import com.ferreusveritas.dynamictrees.block.rooty.RootyBlock;
-import com.ferreusveritas.dynamictrees.systems.fruit.Fruit;
+import com.dtteam.dynamictrees.block.fruit.Fruit;
+import com.dtteam.dynamictrees.block.fruit.FruitBlock;
+import com.dtteam.dynamictrees.block.soil.SoilBlock;
 import maxhyper.dtphc2.DynamicTreesPHC2;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -10,12 +10,9 @@ import net.minecraft.network.protocol.game.DebugPackets;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.damagesource.DamageType;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -71,7 +68,7 @@ public class FallingFruitBlock extends FruitBlock implements IFallingFruit {
     public int getRootY(BlockState state, Level world, BlockPos pos) {
         for (int i=0;i<20;i++){
             BlockPos pos2 = pos.below(i);
-            if (world.getBlockState(pos2).getBlock() instanceof RootyBlock){
+            if (world.getBlockState(pos2).getBlock() instanceof SoilBlock){
                 return pos2.getY();
             }
         }

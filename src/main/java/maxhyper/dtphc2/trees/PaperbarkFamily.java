@@ -1,11 +1,12 @@
 package maxhyper.dtphc2.trees;
 
-import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
-import com.ferreusveritas.dynamictrees.block.branch.BasicBranchBlock;
-import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
-import com.ferreusveritas.dynamictrees.init.DTConfigs;
-import com.ferreusveritas.dynamictrees.tree.family.Family;
+import com.dtteam.dynamictrees.api.registry.TypedRegistry;
+import com.dtteam.dynamictrees.block.branch.BasicBranchBlock;
+import com.dtteam.dynamictrees.block.branch.BranchBlock;
+import com.dtteam.dynamictrees.platform.Services;
+import com.dtteam.dynamictrees.platform.services.IConfigHelper;
+import com.dtteam.dynamictrees.tree.TreeHelper;
+import com.dtteam.dynamictrees.tree.family.Family;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -48,14 +49,13 @@ public class PaperbarkFamily extends Family {
                 super.stripBranch(state,world,pos, getRadius(state));
             }
 
-            @SuppressWarnings("deprecation")
             @Override
             public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource rand) {
                 if (rand.nextFloat() < barkRegrowChance && isStrippedBranch()){
                     int radius = TreeHelper.getRadius(world, pos);
                     int radiusDown = TreeHelper.isBranch(world.getBlockState(pos.below())) ? TreeHelper.getRadius(world, pos.below()) : getMaxRadius();
                     this.getFamily().getBranch().ifPresent(branch -> branch.setRadius(world, pos,
-                                    Math.min(radiusDown, radius + (DTConfigs.ENABLE_STRIP_RADIUS_REDUCTION.get() ? 1 : 0)),
+                                    Math.min(radiusDown, radius + (Services.CONFIG.getBoolConfig(IConfigHelper.ENABLE_STRIP_RADIUS_REDUCTION) ? 1 : 0)),
                                     null
                             )
                     );

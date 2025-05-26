@@ -1,17 +1,17 @@
 package maxhyper.dtphc2.compat.waila;
 
+import maxhyper.dtphc2.DynamicTreesPHC2;
 import maxhyper.dtphc2.blocks.FruitVineBlock;
-import maxhyper.dtphc2.init.DTPHC2Blocks;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.ITooltip;
 import snownee.jade.api.config.IPluginConfig;
-import net.minecraft.ChatFormatting;
 
 public class WailaVineHandler implements IBlockComponentProvider {
-
+    public static final ResourceLocation ID = DynamicTreesPHC2.location("vines");
     public static WailaVineHandler INSTANCE = new WailaVineHandler();
     @Override
     public void appendTooltip(ITooltip tooltip, BlockAccessor accessor, IPluginConfig iPluginConfig) {
@@ -27,6 +27,6 @@ public class WailaVineHandler implements IBlockComponentProvider {
 
     @Override
     public ResourceLocation getUid() {
-        return DTPHC2Blocks.PASSION_FRUIT_VINE.getId();
+        return ID;
     }
 }

@@ -1,17 +1,17 @@
 package maxhyper.dtphc2.blocks;
 
-import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.compat.season.SeasonHelper;
-import com.ferreusveritas.dynamictrees.util.LevelContext;
+import com.dtteam.dynamictrees.api.worldgen.LevelContext;
+import com.dtteam.dynamictrees.systems.season.SeasonHelper;
+import com.dtteam.dynamictrees.tree.TreeHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -25,12 +25,11 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.common.ForgeHooks;
+import net.neoforged.neoforge.common.CommonHooks;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-
-import static com.ferreusveritas.dynamictrees.compat.season.SeasonHelper.isSeasonBetween;
+import java.util.function.Supplier;
 
 public class FruitVineBlock extends VineBlock {
 
@@ -45,8 +44,8 @@ public class FruitVineBlock extends VineBlock {
 
     public static final IntegerProperty ageProperty = IntegerProperty.create("age", 0, maxAge);
 
-    private ItemStack fruitStack;
-    private ItemStack overripeFruitStack;
+    private Supplier<Item> fruit;
+    private Supplier<Item> overripeFruit;
 
     //private Integer fruitingOffset;
     private int matureAge = maxAge;
@@ -60,9 +59,14 @@ public class FruitVineBlock extends VineBlock {
 
     private int maxFruitsAround = 2;
 
-    public FruitVineBlock() {
+    public FruitVineBlock(Supplier<Item> fruit, @Nullable Supplier<Item> overripeFruit) {
         super(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().strength(0.2F).sound(SoundType.VINE));
         this.registerDefaultState(defaultBlockState().setValue(ageProperty, 0));
+        this.fruit = fruit;
+        this.overripeFruit = overripeFruit;
+    }
+    public FruitVineBlock(Supplier<Item> fruit) {
+        this(fruit, null);
     }
 
     public void setAge(Level world, BlockPos pos, BlockState state, int age, boolean destroy) {
@@ -96,12 +100,12 @@ public class FruitVineBlock extends VineBlock {
             fruitOverripenChance = chance;
         return this;
     }
-    public FruitVineBlock setFruitStack(ItemStack stack) {
-        fruitStack = stack;
+    public FruitVineBlock setFruit(Supplier<Item> stack) {
+        fruit = stack;
         return this;
     }
-    public FruitVineBlock setOverripeFruitStack(ItemStack stack) {
-        overripeFruitStack = stack;
+    public FruitVineBlock setOverripeFruit(Supplier<Item> stack) {
+        overripeFruit = stack;
         return this;
     }
     public FruitVineBlock setSeasonOffset(Float seasonOffset){
@@ -144,7 +148,7 @@ public class FruitVineBlock extends VineBlock {
                 : ((matureAge != maxAge && age >= matureAge) ? fruitOverripenChance : fruitGrowChance);
 
         final boolean doGrow = random.nextFloat() < chance;
-        final boolean eventGrow = ForgeHooks.onCropsGrowPre(world, pos, state, doGrow);
+        final boolean eventGrow = CommonHooks.canCropGrow(world, pos, state, doGrow);
         // Prevent a seasons mod from canceling the growth, we handle that ourselves.
         if (season != null ? doGrow || eventGrow : eventGrow) {
             //We look for fruit blocks around. If there is more than two we cancel the fruit growth
@@ -161,7 +165,7 @@ public class FruitVineBlock extends VineBlock {
             }
             setAge(world, pos, state, age + 1, false);
             //changeVineWithProperties(worldIn, pos, getStateFromAge(age + 1), state);
-            ForgeHooks.onCropsGrowPost(world, pos, state);
+            CommonHooks.fireCropGrowPost(world, pos, state);
         }
     }
 
@@ -190,7 +194,7 @@ public class FruitVineBlock extends VineBlock {
         }
         final float min = peakSeasonValue - 1.5F;
         final float max = min + flowerHoldPeriodLength;
-        return isSeasonBetween(seasonValue, min, max);
+        return SeasonHelper.isSeasonBetween(seasonValue, min, max);
     }
 
     private float getFruitingChance(Level world, BlockPos pos) {
@@ -215,14 +219,14 @@ public class FruitVineBlock extends VineBlock {
 
     @Nullable
     private ItemStack getFruit() {
-        if (fruitStack == null) return null;
-        return fruitStack.copy();
+        if (fruit == null) return ItemStack.EMPTY;
+        return new ItemStack(fruit.get());
     }
 
     @Nullable
     private ItemStack getOverripeFruit() {
-        if (overripeFruitStack == null) return null;
-        return overripeFruitStack.copy();
+        if (overripeFruit == null) return ItemStack.EMPTY;
+        return new ItemStack(overripeFruit.get());
     }
 
     private boolean spawnItemFruitIfRipe(Level world, BlockPos pos, BlockState state) {
@@ -239,39 +243,18 @@ public class FruitVineBlock extends VineBlock {
         return false;
     }
 
-    @SuppressWarnings("deprecation")
-    @Nonnull
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
-                                BlockHitResult hit) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         Integer age = getAge(state);
         if (age == null) return InteractionResult.PASS;
         // Drop fruit if mature.
         if (age >= matureAge) {
-            if (spawnItemFruitIfRipe(world, pos, state)) {
-                setAge(world, pos, state, 0, true);
+            if (spawnItemFruitIfRipe(level, pos, state)) {
+                setAge(level, pos, state, 0, true);
                 return InteractionResult.SUCCESS;
             }
         }
-        return InteractionResult.PASS;
-    }
-
-    @Override
-    public boolean canSupportAtFace(BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
-        if (pDirection == Direction.DOWN) {
-            return false;
-        } else {
-            BlockPos blockpos = pPos.relative(pDirection);
-            if (isAcceptableNeighbour(pLevel, blockpos, pDirection)) {
-                return true;
-            } else if (pDirection.getAxis() == Direction.Axis.Y) {
-                return false;
-            } else {
-                BooleanProperty booleanproperty = PROPERTY_BY_DIRECTION.get(pDirection);
-                BlockState blockstate = pLevel.getBlockState(pPos.above());
-                return blockstate.is(this) && blockstate.getValue(booleanproperty);
-            }
-        }
+        return super.useWithoutItem(state, level, pos, player, hitResult);
     }
 
     public static boolean isAcceptableNeighbour(BlockGetter pBlockReader, BlockPos pLevel, Direction pNeighborPos) {
@@ -360,6 +343,28 @@ public class FruitVineBlock extends VineBlock {
 
             }
         }
+    }
+
+    private boolean canSpread(BlockGetter blockReader, BlockPos pos) {
+        int i = 4;
+        Iterable<BlockPos> iterable = BlockPos.betweenClosed(
+                pos.getX() - 4, pos.getY() - 1, pos.getZ() - 4, pos.getX() + 4, pos.getY() + 1, pos.getZ() + 4
+        );
+        int j = 5;
+
+        for (BlockPos blockpos : iterable) {
+            if (blockReader.getBlockState(blockpos).is(this)) {
+                if (--j <= 0) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    private boolean hasHorizontalConnection(BlockState state) {
+        return state.getValue(NORTH) || state.getValue(EAST) || state.getValue(SOUTH) || state.getValue(WEST);
     }
 
     private BlockState copyRandomFaces(BlockState from, BlockState to, RandomSource random) {

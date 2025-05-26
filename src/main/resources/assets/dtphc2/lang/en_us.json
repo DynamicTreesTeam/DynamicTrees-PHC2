@@ -139,8 +139,8 @@
 
   "tooltip.waila.crop_growth" : "Maturity: %s",
   "tooltip.waila.crop_mature": "Ripe",
-  "config.jade.plugin_dtphc2.maple_spile": "Spile",
-  "config.jade.plugin_dtphc2.passion_fruit_vine": "Passion Fruit Vines",
+  "config.jade.plugin_dtphc2.spile": "Spile",
+  "config.jade.plugin_dtphc2.vines": "Fruit Vines",
 
   "item.pamhc2trees.coconutitem": "Coconut Slice",
   "item.pamhc2trees.maplesyrupitem": "Maple Syrup",

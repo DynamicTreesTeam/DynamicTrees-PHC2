@@ -1,11 +1,11 @@
 package maxhyper.dtphc2.canceller;
 
-import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;
-import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
+import com.dtteam.dynamictrees.api.worldgen.BiomePropertySelectors;
+import com.dtteam.dynamictrees.api.worldgen.FeatureCanceller;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class DTPHC2TreeFeatureCanceller extends FeatureCanceller {
 
@@ -19,7 +19,7 @@ public class DTPHC2TreeFeatureCanceller extends FeatureCanceller {
     @Override
     public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, BiomePropertySelectors.NormalFeatureCancellation featureCancellations) {
         Feature<?> feature = configuredFeature.feature();
-        ResourceLocation resource = ForgeRegistries.FEATURES.getKey(feature);
+        ResourceLocation resource = BuiltInRegistries.FEATURE.getKey(feature);
         if (resource == null)
             return false;
         String namespace = resource.getNamespace();

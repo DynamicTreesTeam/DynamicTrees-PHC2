@@ -1,18 +1,18 @@
 package maxhyper.dtphc2.init;
 
-import com.ferreusveritas.dynamictrees.api.applier.ApplierRegistryEvent;
-import com.ferreusveritas.dynamictrees.deserialisation.PropertyAppliers;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictrees.deserialization.PropertyAppliers;
+import com.dtteam.dynamictrees.event.ApplierRegistryEvent;
+import com.dtteam.dynamictrees.tree.species.Species;
 import com.google.gson.JsonElement;
 import maxhyper.dtphc2.DynamicTreesPHC2;
 import maxhyper.dtphc2.trees.FruitLogSpecies;
 import maxhyper.dtphc2.trees.GenOnExtraSoilSpecies;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 
-@Mod.EventBusSubscriber(modid = DynamicTreesPHC2.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = DynamicTreesPHC2.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public final class RegisterJSONAppliers {
 
     @SubscribeEvent

@@ -1,7 +1,7 @@
 package maxhyper.dtphc2.items;
 
-import com.ferreusveritas.dynamictrees.compat.season.SeasonHelper;
-import com.ferreusveritas.dynamictrees.util.LevelContext;
+import com.dtteam.dynamictrees.api.worldgen.LevelContext;
+import com.dtteam.dynamictrees.systems.season.SeasonHelper;
 import maxhyper.dtphc2.blocks.FruitVineBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -11,8 +11,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import java.util.List;
 
 public class FruitVineItem extends BlockItem {
@@ -25,29 +23,30 @@ public class FruitVineItem extends BlockItem {
     }
 
     @Override
-    public void appendHoverText(@Nonnull ItemStack stack, @Nullable Level world, @Nonnull List<Component> tooltip, @Nonnull TooltipFlag flagIn) {
-        super.appendHoverText(stack, world, tooltip, flagIn);
-        if (world == null) return;
-        if (SeasonHelper.getSeasonValue(LevelContext.create(world), BlockPos.ZERO) == null) return;
-        int flags = getSeasonalTooltipFlags(world);
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        Level level = context.level();
+        if (level == null) return;
+        if (SeasonHelper.getSeasonValue(LevelContext.create(level), BlockPos.ZERO) == null) return;
+        int flags = getSeasonalTooltipFlags(level);
 
         if (flags != 0) {
-            tooltip.add(Component.literal("desc.dynamictrees.seasonal.fertile_seasons").append(":"));
+            tooltipComponents.add(Component.literal("desc.dynamictrees.seasonal.fertile_seasons").append(":"));
 
             if ((flags & 15) == 15) {
-                tooltip.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.year_round").withStyle(ChatFormatting.LIGHT_PURPLE)));
+                tooltipComponents.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.year_round").withStyle(ChatFormatting.LIGHT_PURPLE)));
             } else {
                 if ((flags & 1) != 0) {
-                    tooltip.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.spring").withStyle(ChatFormatting.GREEN)));
+                    tooltipComponents.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.spring").withStyle(ChatFormatting.GREEN)));
                 }
                 if ((flags & 2) != 0) {
-                    tooltip.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.summer").withStyle(ChatFormatting.YELLOW)));
+                    tooltipComponents.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.summer").withStyle(ChatFormatting.YELLOW)));
                 }
                 if ((flags & 4) != 0) {
-                    tooltip.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.autumn").withStyle(ChatFormatting.GOLD)));
+                    tooltipComponents.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.autumn").withStyle(ChatFormatting.GOLD)));
                 }
                 if ((flags & 8) != 0) {
-                    tooltip.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.winter").withStyle(ChatFormatting.AQUA)));
+                    tooltipComponents.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.winter").withStyle(ChatFormatting.AQUA)));
                 }
             }
         }

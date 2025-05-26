@@ -1,7 +1,7 @@
 package maxhyper.dtphc2.genfeatures;
 
-import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.api.network.NodeInspector;
+import com.dtteam.dynamictrees.api.network.NodeInspector;
+import com.dtteam.dynamictrees.tree.TreeHelper;
 import maxhyper.dtphc2.blocks.MapleSpileBlock;
 import maxhyper.dtphc2.blocks.MapleSpileBucketBlock;
 import maxhyper.dtphc2.init.DTPHC2Blocks;

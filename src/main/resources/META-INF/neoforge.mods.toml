@@ -1,0 +1,75 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+
+updateJSONURL="https://github.com/DynamicTreesTeam/DynamicTreesVersionInfo/blob/master/Add-ons/PHC2.json?raw=true"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-pams-harvestcraft-2"
+logoFile="logo.png"
+
+authors="${mod_authors}"
+description='''${mod_description}'''
+credits='''${mod_credits}'''
+
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="${neo_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="dynamictrees"
+    type="required"
+    versionRange="[1.5.0-BETA5,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="pamhc2trees"
+    type="required"
+    versionRange="[1.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="dynamictreesplus"
+    type="optional"
+    versionRange="[0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="dtbwg"
+    type="optional"
+    versionRange="(0.0,)"
+    ordering="AFTER"
+[[dependencies.${mod_id}]]
+    modId="dtbop"
+    type="optional"
+    versionRange="(0.0,)"
+    ordering="AFTER"
+[[dependencies.${mod_id}]]
+    modId="dtru"
+    type="optional"
+    versionRange="(0.0,)"
+    ordering="AFTER"
+[[dependencies.${mod_id}]]
+    modId="dtterralith"
+    type="optional"
+    versionRange="(0.0,)"
+    ordering="AFTER"

@@ -1,27 +1,31 @@
 package maxhyper.dtphc2.compat.waila;
 
-import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.compat.waila.WailaOther;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictrees.compat.WailaHelper;
+import com.dtteam.dynamictrees.tree.TreeHelper;
+import com.dtteam.dynamictrees.tree.species.Species;
+import maxhyper.dtphc2.DynamicTreesPHC2;
 import maxhyper.dtphc2.blocks.MapleSpileBlock;
 import maxhyper.dtphc2.blocks.MapleSpileBucketBlock;
 import maxhyper.dtphc2.blocks.MapleSpileCommon;
-import maxhyper.dtphc2.init.DTPHC2Blocks;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.state.BlockState;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.ITooltip;
 import snownee.jade.api.config.IPluginConfig;
-import snownee.jade.api.ui.IElementHelper;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.state.BlockState;
+import snownee.jade.api.ui.IElement;
+import snownee.jade.impl.ui.ElementHelper;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class WailaSpileHandler implements IBlockComponentProvider {
-
+    public static final ResourceLocation ID = DynamicTreesPHC2.location("spile");
     public static WailaSpileHandler INSTANCE = new WailaSpileHandler();
 
     private BlockPos lastPos = BlockPos.ZERO;
@@ -43,13 +47,13 @@ public class WailaSpileHandler implements IBlockComponentProvider {
         }
 
         // ADD ICON
-        IElementHelper elements = tooltip.getElementHelper();
+        List<IElement> elements = new LinkedList<>();
 
-        if (WailaOther.invalid) {
+        if (WailaHelper.invalid) {
             lastPos = BlockPos.ZERO;
             lastSpecies = Species.NULL_SPECIES;
 
-            WailaOther.invalid = false;
+            WailaHelper.invalid = false;
         }
 
         BlockPos pos = accessor.getPosition();
@@ -64,14 +68,14 @@ public class WailaSpileHandler implements IBlockComponentProvider {
         BlockState state = accessor.getLevel().getBlockState(accessor.getPosition());
         if (species == Species.NULL_SPECIES) {
             if (!state.hasProperty(MapleSpileCommon.FACING)) {
-                tooltip.add(elements.item(ItemStack.EMPTY, 0.5f));
+                elements.add(getElement(ItemStack.EMPTY));
             }
             Direction dir = state.getValue(MapleSpileCommon.FACING);
             species = TreeHelper.getExactSpecies(accessor.getLevel(), accessor.getPosition().offset(dir.getOpposite().getNormal()));
         }
 
         //If everything fails just show an iron ingot, womp womp
-        if (species == Species.NULL_SPECIES) tooltip.add(elements.item(new ItemStack(Items.IRON_INGOT), 0.5f));
+        if (species == Species.NULL_SPECIES) tooltip.add(getElement(new ItemStack(Items.IRON_INGOT)));
 
         //Update the cached species and position
         lastSpecies = species;
@@ -84,12 +88,16 @@ public class WailaSpileHandler implements IBlockComponentProvider {
             count = state.getValue(MapleSpileBucketBlock.FILLING);
             count += count == 3 ? 1 : 0;
         }
-        tooltip.add(elements.item(new ItemStack(MapleSpileCommon.getSyrupItem(species), count), 0.5f));
+        elements.add(getElement(new ItemStack(MapleSpileCommon.getSyrupItem(species), count)));
+        elements.forEach(tooltip::append);
     }
 
+    private static IElement getElement(ItemStack stack) {
+        return !stack.isEmpty() ? ElementHelper.INSTANCE.item(stack) : ElementHelper.INSTANCE.spacer(0, 0);
+    }
 
     @Override
     public ResourceLocation getUid() {
-        return DTPHC2Blocks.MAPLE_SPILE_BLOCK.getId();
+        return ID;
     }
 }

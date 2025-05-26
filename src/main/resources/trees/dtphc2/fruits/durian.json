@@ -2,9 +2,9 @@
   "type": "dtphc2:falling_fruit",
   "item_stack": "pamhc2trees:durianitem",
   "block_shapes": [
-    { "function": "fruit", "parameters": { "radius": 1, "height": 1, "stem_length": 0, "fraction": 16 } },
-    { "function": "fruit", "parameters": { "radius": 1, "height": 2, "stem_length": 0, "fraction": 16 } },
-    { "function": "fruit", "parameters": { "radius": 2.5, "height": 5, "stem_length": 3 } },
-    { "function": "fruit", "parameters": { "radius": 3.5, "height": 7, "stem_length": 5 } }
+    { "function": "fruit", "parameters": { "width": 1, "height": 1, "stem_length": 0, "fraction": 16 } },
+    { "function": "fruit", "parameters": { "width": 1, "height": 2, "stem_length": 0, "fraction": 16 } },
+    { "function": "fruit", "parameters": { "width": 2.5, "height": 5, "stem_length": 3 } },
+    { "function": "fruit", "parameters": { "width": 3.5, "height": 7, "stem_length": 5 } }
   ]
 }

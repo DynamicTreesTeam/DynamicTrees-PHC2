@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout_mipped",
 	"parent": "dtphc2:block/fruit/generic/berry_age2",
 	"ambientocclusion": false,
 	"textures": {

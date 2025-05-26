@@ -1,6 +1,6 @@
 package maxhyper.dtphc2.compat;
 
-import com.ferreusveritas.dynamictreesplus.init.DTPConfigs;
+import com.dtteam.dynamictreesplus.init.DTPConfigs;
 
 public class DTPConfig implements DTPConfigProxy {
 

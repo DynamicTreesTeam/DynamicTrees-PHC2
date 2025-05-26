@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout_mipped",
 	"parent": "dtphc2:block/fruit/generic/flower_age0",
 	"ambientocclusion": false,
 	"textures": {

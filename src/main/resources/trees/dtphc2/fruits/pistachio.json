@@ -1,10 +1,10 @@
 {
   "item_stack": "pamhc2trees:pistachioitem",
   "block_shapes": [
-    { "function": "fruit", "parameters": { "radius": 1.8, "height": 4, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 1, "height": 3, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 2.8, "height": 4, "stem_length": 1 } },
-    { "function": "fruit", "parameters": { "radius": 2.8, "height": 4, "stem_length": 2 } }
+    { "function": "fruit", "parameters": { "width": 1.8, "height": 4, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 1, "height": 3, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 2.8, "height": 4, "stem_length": 1 } },
+    { "function": "fruit", "parameters": { "width": 2.8, "height": 4, "stem_length": 2 } }
   ],
   "min_drop_count": 1,
   "max_drop_count": 3

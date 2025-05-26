@@ -5,27 +5,27 @@
   "block_shapes": {
     "east": [
       [0.45, 0.7, 0.35, 0.9, 1, 0.65],
-      { "function": "pod", "parameters": { "radius": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "east", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "east", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "east", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "east", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "east", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "east", "fraction": 20 } }
     ],
     "west": [
       [0.1, 0.7, 0.35, 0.55, 1, 0.65],
-      { "function": "pod", "parameters": { "radius": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "west", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "west", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "west", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "west", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "west", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "west", "fraction": 20 } }
     ],
     "north": [
       [0.35, 0.7, 0.1, 0.65, 1, 0.55],
-      { "function": "pod", "parameters": { "radius": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "north", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "north", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "north", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "north", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "north", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "north", "fraction": 20 } }
     ],
     "south": [
       [0.35, 0.7, 0.45, 0.65, 1, 0.9],
-      { "function": "pod", "parameters": { "radius": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "south", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "south", "fraction": 20 } },
-      { "function": "pod", "parameters": { "radius": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "south", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 3.5, "height": 7, "stem_length": 2, "side_offset": 6.5, "side": "south", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 4.5, "height": 9, "stem_length": 3, "side_offset": 5.5, "side": "south", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 5, "height": 10, "stem_length": 4, "side_offset": 5, "side": "south", "fraction": 20 } }
     ]
   }
 }

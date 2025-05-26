@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
 	"textures": {
 		"fruit": "dtphc2:block/mango"

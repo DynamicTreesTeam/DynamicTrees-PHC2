@@ -1,6 +1,6 @@
 package maxhyper.dtphc2.event;
 
-import com.ferreusveritas.dynamictrees.api.TreeHelper;
+import com.dtteam.dynamictrees.tree.TreeHelper;
 import maxhyper.dtphc2.init.DTPHC2Blocks;
 import maxhyper.dtphc2.init.DTPHC2Registries;
 import net.minecraft.core.BlockPos;
@@ -15,15 +15,15 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 import java.util.Objects;
 
 import static maxhyper.dtphc2.DynamicTreesPHC2.MOD_ID;
 
-@Mod.EventBusSubscriber(modid = MOD_ID)
+@EventBusSubscriber(modid = MOD_ID)
 public class SpilePlacementEvent {
 
 

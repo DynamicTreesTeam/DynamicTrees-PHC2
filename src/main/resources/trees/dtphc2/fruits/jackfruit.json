@@ -2,9 +2,9 @@
   "type": "dtphc2:falling_fruit",
   "item_stack": "pamhc2trees:jackfruititem",
   "block_shapes": [
-    { "function": "fruit", "parameters": { "radius": 1, "height": 1, "stem_length": 0, "fraction": 16 } },
-    { "function": "fruit", "parameters": { "radius": 2.5, "height": 6, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 3, "height": 8, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "radius": 3.5, "height": 9, "stem_length": 1.25 } }
+    { "function": "fruit", "parameters": { "width": 1, "height": 1, "stem_length": 0, "fraction": 16 } },
+    { "function": "fruit", "parameters": { "width": 2.5, "height": 6, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 3, "height": 8, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 3.5, "height": 9, "stem_length": 1.25 } }
   ]
 }
