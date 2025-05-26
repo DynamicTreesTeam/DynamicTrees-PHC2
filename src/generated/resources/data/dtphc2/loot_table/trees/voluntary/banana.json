@@ -12,11 +12,11 @@
               "rarity": 1.0
             }
           ],
-          "name": "dtphc2:cinnamon_seed"
+          "name": "dtphc2:banana_seed"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "dtphc2:trees/voluntary/cinnamon"
+  "random_sequence": "dtphc2:trees/voluntary/banana"
 }
