@@ -41,7 +41,7 @@
       "properties": {
         "fruit": "dtphc2:acorn",
         "quantity": 1,
-        "place_chance": 0.25
+        "place_chance": 0.1
       }
     }
   ],

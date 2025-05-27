@@ -1,15 +1,15 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/acorn",
 		"fruit": "dtphc2:block/acorn"
 	},
 	"elements": [
 		{
-			"from": [7.2, 13.6, 7.2],
-			"to": [8.8, 16, 8.8],
+			"from": [7, 13, 7],
+			"to": [9, 16, 9],
 			"faces": {
 				"north": {"uv": [1, 5, 3, 8], "texture": "#fruit"},
 				"east": {"uv": [1, 5, 3, 8], "texture": "#fruit"},

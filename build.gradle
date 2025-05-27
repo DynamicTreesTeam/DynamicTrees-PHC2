@@ -90,7 +90,8 @@ configurations {
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    implementation 'curse.maven:dynamictrees-252818:6565776'
+    implementation ':dynamictrees:neoforge-1.21.1-1.5.0-BETA06'
+    //implementation 'curse.maven:dynamictrees-252818:6565776'
     implementation 'curse.maven:dynamictreesplus-478155:6566078'
     implementation 'curse.maven:jade-324717:6291517'
 
@@ -153,6 +154,7 @@ publishMods {
         accessToken = curseApiKey ?: System.getenv("CURSEFORGE_API_KEY")
         minecraftVersions.add("1.21.1")
         requires("dynamictrees")
+        requires("pams-harvestcraft-2-trees")
     }
 //    modrinth {
 //        projectId = ""

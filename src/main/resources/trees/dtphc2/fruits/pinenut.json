@@ -1,9 +1,9 @@
 {
   "item_stack": "dtphc2:pinenut_seed",
   "block_shapes": [
-    { "function": "fruit", "parameters": { "width": 1.1, "height": 4, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "width": 1.5, "height": 3, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "width": 2, "height": 6, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "width": 2, "height": 6, "stem_length": 1.25 } }
+    { "function": "fruit", "parameters": { "width": 2.2, "height": 4, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 3, "height": 3, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 4, "height": 6, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 4, "height": 6, "stem_length": 1 } }
   ]
 }
