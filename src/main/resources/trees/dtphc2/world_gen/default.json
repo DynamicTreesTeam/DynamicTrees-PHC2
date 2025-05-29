@@ -2,7 +2,7 @@
   {
     "__comment": "Spawn cold trees",
     "select": {
-      "AND": [{"OR": [{"tag": "#forge:is_cold"}, {"tag": "#forge:is_snowy"}, {"tag": "#forge:is_coniferous"}]},{"tags": ["#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]}]
+      "AND": [{"OR": [{"tag": "#c:is_cold"}, {"tag": "#c:is_snowy"}, {"tag": "#c:is_coniferous"}]},{"tags": ["#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]}]
     },
     "apply": {
       "species": {
@@ -33,7 +33,7 @@
   {
     "__comment": "Spawn temperate trees",
     "select": {
-      "tags": ["!#forge:is_cold", "!#forge:is_hot", "!#forge:is_wet", "!#forge:is_dry", "#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]
+      "tags": ["!#c:is_cold", "!#c:is_hot", "!#c:is_wet", "!#c:is_dry", "#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]
     },
     "apply": {
       "species": {
@@ -58,7 +58,7 @@
   {
     "__comment": "Spawn forest trees",
     "select": {
-      "tags": ["#minecraft:is_forest", "!#forge:is_coniferous", "#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]
+      "tags": ["#minecraft:is_forest", "!#c:is_coniferous", "#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]
     },
     "apply": {
       "species": {
@@ -78,7 +78,7 @@
   {
     "__comment": "Spawn hills / mountain trees",
     "select": {
-      "AND": [{"OR": [{"tag": "#minecraft:is_hill"}, {"tag": "#minecraft:is_mountain"}]},{"tags": ["#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]}]
+      "AND": [{"OR": [{"tag": "#minecraft:is_hill"}, {"tag": "#minecraft:is_mountain"}]},{"tags": ["#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]}]
     },
     "apply": {
       "species": {
@@ -98,7 +98,7 @@
     "__comment1": "Spawn beach and river trees",
     "__comment2": "When generating trees in biomes normally without them, ALWAYS set density and chance to 1, and adjust the odds with a splice.",
     "select": {
-      "AND": [{"OR": [{"tag": "#minecraft:is_beach"}, {"tag": "#minecraft:is_river"}]},{"tags": ["#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]}]
+      "AND": [{"OR": [{"tag": "#minecraft:is_beach"}, {"tag": "#minecraft:is_river"}]},{"tags": ["#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]}]
     },
     "apply": {
       "species": {
@@ -117,7 +117,7 @@
   {
     "__comment": "Spawn jungle trees",
     "select": {
-      "tags": ["#minecraft:is_jungle", "#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]
+      "tags": ["#minecraft:is_jungle", "#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]
     },
     "apply": {
       "species": {
@@ -145,7 +145,7 @@
   {
     "__comment": "Spawn savanna trees",
     "select": {
-      "tags": ["#minecraft:is_savanna", "#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]
+      "tags": ["#minecraft:is_savanna", "#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]
     },
     "apply": {
       "species": {
@@ -172,7 +172,7 @@
   {
     "__comment": "Spawn desert trees",
     "select": {
-      "tags": ["#forge:is_sandy", "#forge:is_hot", "#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]
+      "tags": ["#c:is_sandy", "#c:is_hot", "#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]
     },
     "apply": {
       "species": {
@@ -187,7 +187,7 @@
   {
     "__comment": "Spawn swamp trees",
     "select": {
-      "tags": ["#forge:is_swamp", "#minecraft:is_overworld", "!#forge:is_spooky", "!#forge:is_rare"]
+      "tags": ["#c:is_swamp", "#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]
     },
     "apply": {
       "species": {

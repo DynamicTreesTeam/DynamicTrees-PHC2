@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
+	"render_type": "minecraft:translucent",
 	"textures": {
 		"particle": "dtphc2:block/spile_bucket",
 		"bucket": "dtphc2:block/spile_bucket",

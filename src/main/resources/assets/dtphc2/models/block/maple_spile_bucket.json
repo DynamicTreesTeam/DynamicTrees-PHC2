@@ -1,5 +1,6 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
+    "render_type": "minecraft:cutout_mipped",
     "textures": {
         "particle": "dtphc2:block/spile_bucket",
         "bucket": "dtphc2:block/spile_bucket"

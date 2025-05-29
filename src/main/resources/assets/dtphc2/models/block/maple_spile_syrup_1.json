@@ -1,5 +1,6 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
+    "render_type": "minecraft:translucent",
     "textures": {
         "syrup": "dtphc2:block/spile_liquid",
         "particle": "dtphc2:block/spile_liquid"

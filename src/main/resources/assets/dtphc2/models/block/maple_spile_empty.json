@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
+	"render_type": "minecraft:translucent",
 	"textures": {
 		"particle": "dtphc2:block/spile",
 		"spile": "dtphc2:block/spile",
@@ -20,7 +20,6 @@
 			}
 		},
 		{
-			"name": "cube_overlay",
 			"from": [7, 10, -1],
 			"to": [9, 12, 4],
 			"faces": {
@@ -44,7 +43,6 @@
 			}
 		},
 		{
-			"name": "cube_overlay",
 			"from": [7, 10, 4],
 			"to": [9, 11, 6],
 			"faces": {

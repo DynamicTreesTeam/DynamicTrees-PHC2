@@ -4,8 +4,9 @@
 	"render_type": "minecraft:cutout_mipped",
 	"elements": [
 		{
-			"from": [4.5, 10.5, 8.5],
-			"to": [7.5, 13.5, 11.5],
+			"from": [4.5, 11.5, 8.5],
+			"to": [7.5, 14.5, 11.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 1, 0]},
 			"faces": {
 				"north": {"uv": [4, 5, 7, 8], "texture": "#fruit"},
 				"east": {"uv": [4, 8, 7, 11], "texture": "#fruit"},
@@ -16,8 +17,9 @@
 			}
 		},
 		{
-			"from": [5.5, 10, 4.5],
-			"to": [8.5, 13, 7.5],
+			"from": [5.5, 11, 4.5],
+			"to": [8.5, 14, 7.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 1, 0]},
 			"faces": {
 				"north": {"uv": [4, 8, 7, 11], "texture": "#fruit"},
 				"east": {"uv": [4, 5, 7, 8], "texture": "#fruit"},
@@ -28,8 +30,9 @@
 			}
 		},
 		{
-			"from": [8.5, 11, 6],
-			"to": [11.5, 14, 9],
+			"from": [8.5, 12, 6],
+			"to": [11.5, 15, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 1, 0]},
 			"faces": {
 				"north": {"uv": [4, 8, 7, 11], "texture": "#fruit"},
 				"east": {"uv": [4, 5, 7, 8], "texture": "#fruit"},

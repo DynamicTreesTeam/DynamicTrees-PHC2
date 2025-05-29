@@ -36,16 +36,16 @@
     {   "when": { "facing": "east", "filling": "3" },
       "apply": { "model": "dtphc2:block/maple_spile_bucket_full", "y": 270 }
     },
-    {   "when": { "facing": "south", "filling": "1|2|3" },
+    {   "when": { "facing": "south", "filling": "1|2" },
       "apply": { "model": "dtphc2:block/maple_spile_syrup_stream" }
     },
-    {   "when": { "facing": "west", "filling": "1|2|3" },
+    {   "when": { "facing": "west", "filling": "1|2" },
       "apply": { "model": "dtphc2:block/maple_spile_syrup_stream", "y": 90 }
     },
-    {   "when": { "facing": "north", "filling": "1|2|3" },
+    {   "when": { "facing": "north", "filling": "1|2" },
       "apply": { "model": "dtphc2:block/maple_spile_syrup_stream", "y": 180 }
     },
-    {   "when": { "facing": "east", "filling": "1|2|3" },
+    {   "when": { "facing": "east", "filling": "1|2" },
       "apply": { "model": "dtphc2:block/maple_spile_syrup_stream", "y": 270 }
     },
     {   "when": { "facing": "south", "filling": "1" },
