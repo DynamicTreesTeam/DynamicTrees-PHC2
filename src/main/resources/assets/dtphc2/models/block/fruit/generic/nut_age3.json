@@ -1,15 +1,11 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
-	"textures": {
-		"particle": "block/stone",
-		"fruit": "block/stone"
-	},
+	"render_type": "minecraft:cutout_mipped",
 	"elements": [
 		{
-			"from": [6, 11, 6],
-			"to": [10, 15, 10],
+			"from": [5.5, 10, 5.5],
+			"to": [10.5, 15, 10.5],
 			"faces": {
 				"north": {"uv": [7, 5, 12, 10], "texture": "#fruit"},
 				"east": {"uv": [7, 5, 12, 10], "texture": "#fruit"},
@@ -20,8 +16,8 @@
 			}
 		},
 		{
-			"from": [10, 11, 6],
-			"to": [6, 15, 10],
+			"from": [10.5, 10, 5.5],
+			"to": [5.5, 15, 10.5],
 			"faces": {
 				"north": {"uv": [7, 5, 12, 10], "texture": "#fruit"},
 				"east": {"uv": [7, 5, 12, 10], "texture": "#fruit"},
@@ -32,9 +28,8 @@
 			}
 		},
 		{
-			"from": [6.7, 11.4, 6.7],
-			"to": [9.3, 14.6, 9.3],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8.1, 8.4, 8.1]},
+			"from": [6.5, 10.5, 6.5],
+			"to": [9.5, 14.5, 9.5],
 			"faces": {
 				"north": {"uv": [12, 5, 15, 9], "texture": "#fruit"},
 				"east": {"uv": [12, 5, 15, 9], "texture": "#fruit"},
@@ -45,20 +40,20 @@
 			}
 		},
 		{
-			"from": [7.5, 14.2, 8],
+			"from": [7.5, 14, 8],
 			"to": [8.5, 16, 8],
 			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.8, 8], "rescale": true},
 			"faces": {
 				"north": {"uv": [15, 0, 16, 1], "texture": "#fruit"},
 				"south": {"uv": [15, 0, 16, 1], "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [8, 14.2, 7.5],
+			"from": [8, 14, 7.5],
 			"to": [8, 16, 8.5],
 			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.8, 8], "rescale": true},
 			"faces": {
 				"east": {"uv": [15, 1, 16, 2], "texture": "#fruit"},
 				"west": {"uv": [15, 1, 16, 2], "texture": "#fruit"}

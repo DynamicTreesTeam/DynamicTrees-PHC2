@@ -1,5 +1,5 @@
 {
-    "parent": "dtphc2:block/fruit/generic/lemon_age1",
+    "parent": "dynamictrees:block/fruit/apple_age1",
     "textures": {
         "particle": "dtphc2:block/lemon",
         "fruit": "dtphc2:block/lemon"

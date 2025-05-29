@@ -1,51 +1,51 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/banana",
 		"fruit": "dtphc2:block/banana"
 	},
 	"elements": [
 		{
-			"from": [8, 16, 7.2],
-			"to": [8, 22.4, 8.8],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
-			"faces": {
-				"east": {"uv": [9, 0, 10, 4], "texture": "#fruit"},
-				"west": {"uv": [9, 0, 10, 4], "texture": "#fruit"}
-			}
-		},
-		{
-			"from": [8, 8, 6],
-			"to": [8, 12, 10],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
-			"faces": {
-				"east": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"},
-				"west": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"}
-			}
-		},
-		{
-			"from": [8, 8, 6],
-			"to": [8, 12, 10],
-			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
-			"faces": {
-				"east": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"},
-				"west": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"}
-			}
-		},
-		{
-			"from": [7.2, 16, 8],
-			"to": [8.8, 22.4, 8],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"from": [7, 15, 8],
+			"to": [9, 23, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 15, 8]},
 			"faces": {
 				"north": {"uv": [9, 0, 10, 4], "texture": "#fruit"},
 				"south": {"uv": [9, 0, 10, 4], "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [6, 12, 6],
-			"to": [10, 16, 10],
+			"from": [7, 15, 8],
+			"to": [9, 23, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 15, 8]},
+			"faces": {
+				"north": {"uv": [9, 0, 10, 4], "texture": "#fruit"},
+				"south": {"uv": [9, 0, 10, 4], "texture": "#fruit"}
+			}
+		},
+		{
+			"from": [8, 5, 5.5],
+			"to": [8, 10, 10.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 5, 8]},
+			"faces": {
+				"east": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"},
+				"west": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"}
+			}
+		},
+		{
+			"from": [5.5, 5, 8],
+			"to": [10.5, 10, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 5, 8]},
+			"faces": {
+				"north": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"},
+				"south": {"uv": [11, 5, 13.5, 7.5], "texture": "#fruit"}
+			}
+		},
+		{
+			"from": [5.5, 10, 5.5],
+			"to": [10.5, 15, 10.5],
 			"faces": {
 				"north": {"uv": [11, 2.5, 13.5, 5], "texture": "#fruit"},
 				"east": {"uv": [11, 2.5, 13.5, 5], "texture": "#fruit"},

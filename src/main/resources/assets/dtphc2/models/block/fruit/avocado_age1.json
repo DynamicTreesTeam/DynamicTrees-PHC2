@@ -1,5 +1,5 @@
 {
-	"parent": "dtphc2:block/fruit/generic/pear_age1",
+	"parent": "dtphc2:block/fruit/generic/fruit_leaf_age1",
 	"textures": {
 		"particle": "dtphc2:block/avocado",
 		"fruit": "dtphc2:block/avocado"

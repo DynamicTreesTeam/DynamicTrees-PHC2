@@ -1,15 +1,16 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/breadfruit",
 		"fruit": "dtphc2:block/breadfruit"
 	},
 	"elements": [
 		{
-			"from": [6, 12, 6],
-			"to": [10, 16, 10],
+			"from": [5.5, 11, 5.5],
+			"to": [10.5, 16, 10.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 0, -1]},
 			"faces": {
 				"north": {"uv": [2.5, 2.5, 5, 5], "texture": "#fruit"},
 				"east": {"uv": [2.5, 2.5, 5, 5], "texture": "#fruit"},
