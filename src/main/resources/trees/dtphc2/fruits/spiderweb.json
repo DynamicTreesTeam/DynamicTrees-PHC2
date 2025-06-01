@@ -2,9 +2,9 @@
   "type": "dtphc2:cobweb",
   "item_stack": "string",
   "block_shapes": [
-    { "function": "fruit", "parameters": { "width": 2, "height": 5, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 3, "height": 5, "stem_length": 0 } },
     { "function": "fruit", "parameters": { "width": 9, "height": 8, "stem_length": 0 } },
     { "function": "fruit", "parameters": { "width": 9, "height": 12, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "width": 12, "height": 15, "stem_length": 0 } }
+    { "function": "fruit", "parameters": { "width": 12, "height": 14, "stem_length": 0 } }
   ]
 }

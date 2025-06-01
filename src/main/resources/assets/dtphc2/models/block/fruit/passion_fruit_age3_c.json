@@ -1,16 +1,36 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/passion_fruit",
 		"fruit": "dtphc2:block/passion_fruit"
 	},
 	"elements": [
 		{
-			"from": [3.2, 1.6, 11.9],
-			"to": [6.4, 4.8, 15.1],
-			"rotation": {"angle": 0, "axis": "y", "origin": [4.4, -2.2, 13.1]},
+			"from": [4.5, 5, 14.6],
+			"to": [5.5, 6, 14.6],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [5, -2, 14.6], "rescale": true},
+			"faces": {
+				"north": {"uv": [15, 0, 16, 1], "texture": "#fruit"},
+				"south": {"uv": [15, 0, 16, 1], "texture": "#fruit"}
+			}
+		},
+		{
+			"from": [5, 5, 14.1],
+			"to": [5, 6, 15.1],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [5, -2, 14.6], "rescale": true},
+			"faces": {
+				"east": {"uv": [15, 1, 16, 2], "texture": "#fruit"},
+				"west": {"uv": [15, 1, 16, 2], "texture": "#fruit"}
+			}
+		},
+		{
+			"from": [3, 1, 11],
+			"to": [7, 5, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4.2, -2.8, 12.2]},
 			"faces": {
 				"north": {"uv": [10, 5, 14, 9], "texture": "#fruit"},
 				"east": {"uv": [10, 5, 14, 9], "texture": "#fruit"},
@@ -18,26 +38,6 @@
 				"west": {"uv": [10, 5, 14, 9], "texture": "#fruit"},
 				"up": {"uv": [10, 0, 14, 4], "texture": "#fruit"},
 				"down": {"uv": [10, 10, 14, 14], "texture": "#fruit"}
-			}
-		},
-		{
-			"from": [4.3, 4.8, 14.6],
-			"to": [5.3, 5.8, 14.6],
-			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [4.8, -2.2, 14.6], "rescale": true},
-			"faces": {
-				"north": {"uv": [15, 0, 16, 1], "texture": "#fruit"},
-				"south": {"uv": [15, 0, 16, 1], "texture": "#fruit"}
-			}
-		},
-		{
-			"from": [4.8, 4.8, 14.1],
-			"to": [4.8, 5.8, 15.1],
-			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [4.8, -2.2, 14.6], "rescale": true},
-			"faces": {
-				"east": {"uv": [15, 1, 16, 2], "texture": "#fruit"},
-				"west": {"uv": [15, 1, 16, 2], "texture": "#fruit"}
 			}
 		}
 	]

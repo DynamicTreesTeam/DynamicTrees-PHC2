@@ -1,16 +1,16 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/durian",
 		"fruit": "dtphc2:block/durian"
 	},
 	"elements": [
 		{
-			"from": [5.2, 6.4, 5.2],
-			"to": [10.8, 12, 10.8],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5, 8]},
+			"name": "fruit",
+			"from": [4.5, 4, 4.5],
+			"to": [11.5, 11, 11.5],
 			"faces": {
 				"north": {"uv": [5.5, 3.5, 9, 7], "texture": "#fruit"},
 				"east": {"uv": [5.5, 3.5, 9, 7], "texture": "#fruit"},
@@ -21,8 +21,9 @@
 			}
 		},
 		{
-			"from": [7.5, 12, 8],
-			"to": [8.5, 16, 8.001],
+			"name": "stem1",
+			"from": [7.5, 11, 8],
+			"to": [8.5, 16, 8],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
 			"faces": {
@@ -31,8 +32,9 @@
 			}
 		},
 		{
-			"from": [8, 12, 7.5],
-			"to": [8.001, 16, 8.5],
+			"name": "stem2",
+			"from": [8, 11, 7.5],
+			"to": [8, 16, 8.5],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
 			"faces": {
@@ -41,57 +43,63 @@
 			}
 		},
 		{
-			"from": [3.2, 6.4, 8],
-			"to": [12.8, 12, 8],
-			"rotation": {"angle": -45, "axis": "y", "origin": [8, 12, 8]},
+			"name": "spikes",
+			"from": [4.5, 7.5, 3.5],
+			"to": [11.5, 7.5, 12.5],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 7.5, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [13, 3.5, 9, 7], "texture": "#fruit"},
-				"south": {"uv": [9, 3.5, 13, 7], "texture": "#fruit"}
+				"up": {"uv": [13.5, 7, 9, 3.5], "rotation": 90, "texture": "#fruit"},
+				"down": {"uv": [13.5, 3.5, 9, 7], "rotation": 270, "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [8, 6.4, 3.2],
-			"to": [8, 12, 12.8],
-			"rotation": {"angle": -45, "axis": "y", "origin": [8, 12, 8]},
+			"name": "spikes",
+			"from": [4.5, 7.5, 3.5],
+			"to": [11.5, 7.5, 12.5],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 7.5, 8], "rescale": true},
 			"faces": {
-				"east": {"uv": [13, 3.5, 9, 7], "texture": "#fruit"},
-				"west": {"uv": [9, 3.5, 13, 7], "texture": "#fruit"}
+				"up": {"uv": [13.5, 7, 9, 3.5], "rotation": 90, "texture": "#fruit"},
+				"down": {"uv": [13.5, 3.5, 9, 7], "rotation": 270, "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [5.2, 4.4, 7.9999],
-			"to": [10.8, 14, 7.9999],
-			"rotation": {"angle": -45, "axis": "x", "origin": [5, 9.2, 8]},
+			"name": "spikes",
+			"from": [3.5, 7.5, 4.5],
+			"to": [12.5, 7.5, 11.5],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 7.5, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [13, 3.5, 9, 7], "rotation": 90, "texture": "#fruit"},
-				"south": {"uv": [13, 7, 9, 3.5], "rotation": 90, "texture": "#fruit"}
+				"up": {"uv": [13.5, 7, 9, 3.5], "rotation": 180, "texture": "#fruit"},
+				"down": {"uv": [13.5, 3.5, 9, 7], "rotation": 180, "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [5.2, 4.4, 8],
-			"to": [10.8, 14, 8],
-			"rotation": {"angle": 45, "axis": "x", "origin": [5, 9.2, 8]},
+			"name": "spikes",
+			"from": [3.5, 7.5, 4.5],
+			"to": [12.5, 7.5, 11.5],
+			"rotation": {"angle": -45, "axis": "z", "origin": [8, 7.5, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [13, 7, 9, 3.5], "rotation": 270, "texture": "#fruit"},
-				"south": {"uv": [13, 3.5, 9, 7], "rotation": 270, "texture": "#fruit"}
+				"up": {"uv": [13.5, 7, 9, 3.5], "rotation": 180, "texture": "#fruit"},
+				"down": {"uv": [13.5, 3.5, 9, 7], "rotation": 180, "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [3.2, 9.2, 5.2],
-			"to": [12.8, 9.2, 10.8],
-			"rotation": {"angle": -45, "axis": "z", "origin": [8, 9.2, 5]},
+			"name": "spikes",
+			"from": [8, 4, 3.5],
+			"to": [8, 11, 12.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.5, 8], "rescale": true},
 			"faces": {
-				"up": {"uv": [13, 7, 9, 3.5], "rotation": 180, "texture": "#fruit"},
-				"down": {"uv": [13, 3.5, 9, 7], "rotation": 180, "texture": "#fruit"}
+				"east": {"uv": [13.5, 3.5, 9, 7], "texture": "#fruit"},
+				"west": {"uv": [13.5, 7, 9, 3.5], "rotation": 180, "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [8, 4.4, 5.2],
-			"to": [8, 14, 10.8],
-			"rotation": {"angle": -45, "axis": "z", "origin": [8, 9.2, 5]},
+			"name": "spikes",
+			"from": [8, 4, 3.5],
+			"to": [8, 11, 12.5],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 7.5, 8], "rescale": true},
 			"faces": {
-				"east": {"uv": [13, 3.5, 9, 7], "rotation": 90, "texture": "#fruit"},
-				"west": {"uv": [13, 7, 9, 3.5], "rotation": 90, "texture": "#fruit"}
+				"east": {"uv": [13.5, 3.5, 9, 7], "texture": "#fruit"},
+				"west": {"uv": [13.5, 7, 9, 3.5], "rotation": 180, "texture": "#fruit"}
 			}
 		}
 	]

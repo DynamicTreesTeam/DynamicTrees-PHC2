@@ -1,23 +1,7 @@
 {
-	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
-	"ambientocclusion": false,
+	"parent": "dynamictrees:block/fruit/apple_age1",
 	"textures": {
 		"particle": "dtphc2:block/fig",
-		"fruit": "dtphc2:block/fig"
-	},
-	"elements": [
-		{
-			"from": [7, 14, 7],
-			"to": [9, 16, 9],
-			"faces": {
-				"north": {"uv": [1, 6, 4, 9], "texture": "#fruit"},
-				"east": {"uv": [1, 6, 4, 9], "texture": "#fruit"},
-				"south": {"uv": [1, 6, 4, 9], "texture": "#fruit"},
-				"west": {"uv": [1, 6, 4, 9], "texture": "#fruit"},
-				"up": {"uv": [1, 1, 4, 4], "texture": "#fruit"},
-				"down": {"uv": [1, 11, 4, 14], "texture": "#fruit"}
-			}
-		}
-	]
+		"apple": "dtphc2:block/fig"
+	}
 }

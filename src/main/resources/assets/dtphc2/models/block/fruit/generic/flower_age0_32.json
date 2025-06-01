@@ -2,6 +2,9 @@
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"render_type": "minecraft:cutout_mipped",
+	"textures": {
+		"particle": "#fruit"
+	},
 	"elements": [
 		{
 			"name": "Petal4",

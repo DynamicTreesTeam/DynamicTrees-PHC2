@@ -1,16 +1,16 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/passion_fruit",
 		"fruit": "dtphc2:block/passion_fruit"
 	},
 	"elements": [
 		{
-			"from": [3.2, 2.6, 11.9],
-			"to": [6.4, 5.8, 15.1],
-			"rotation": {"angle": 0, "axis": "y", "origin": [4.8, -2.2, 8]},
+			"from": [3, 2, 11],
+			"to": [7, 6, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4.6, -2.8, 7.1]},
 			"faces": {
 				"north": {"uv": [5, 5, 9, 9], "texture": "#fruit"},
 				"east": {"uv": [5, 5, 9, 9], "texture": "#fruit"},

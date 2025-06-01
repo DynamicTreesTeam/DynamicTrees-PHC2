@@ -1,27 +1,27 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/pinenut",
 		"fruit": "dtphc2:block/pinenut"
 	},
 	"elements": [
 		{
-			"from": [8, 12.6, 6.8],
-			"to": [8, 16, 9.2],
+			"from": [6.5, 12, 8],
+			"to": [9.5, 16, 8],
 			"shade": false,
-			"rotation": {"angle": -45, "axis": "y", "origin": [8, 14.3, 8]},
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 16, 8]},
 			"faces": {
-				"east": {"uv": [0, 12, 3, 16], "rotation": 180, "texture": "#fruit"},
-				"west": {"uv": [0, 12, 3, 16], "rotation": 180, "texture": "#fruit"}
+				"north": {"uv": [0, 12, 3, 16], "rotation": 180, "texture": "#fruit"},
+				"south": {"uv": [0, 12, 3, 16], "rotation": 180, "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [8, 12.6, 6.8],
-			"to": [8, 16, 9.2],
+			"from": [8, 12, 6.5],
+			"to": [8, 16, 9.5],
 			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 14.3, 8]},
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 16, 8]},
 			"faces": {
 				"east": {"uv": [0, 12, 3, 16], "rotation": 180, "texture": "#fruit"},
 				"west": {"uv": [0, 12, 3, 16], "rotation": 180, "texture": "#fruit"}

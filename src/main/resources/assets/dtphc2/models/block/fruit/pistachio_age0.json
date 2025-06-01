@@ -1,25 +1,25 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/pistachio",
 		"fruit": "dtphc2:block/pistachio"
 	},
 	"elements": [
 		{
-			"from": [8, 11.8, 6],
-			"to": [8, 16, 10],
+			"from": [5.5, 11, 8],
+			"to": [10.5, 16, 8],
 			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
-				"east": {"uv": [10, 11, 15, 16], "texture": "#fruit"},
-				"west": {"uv": [10, 11, 15, 16], "texture": "#fruit"}
+				"north": {"uv": [10, 11, 15, 16], "texture": "#fruit"},
+				"south": {"uv": [10, 11, 15, 16], "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [8, 11.8, 6],
-			"to": [8, 16, 10],
+			"from": [8, 11, 5.5],
+			"to": [8, 16, 10.5],
 			"shade": false,
 			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {

@@ -1,15 +1,16 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/tamarind",
 		"fruit": "dtphc2:block/tamarind"
 	},
 	"elements": [
 		{
-			"from": [6.8, 7, 6.8],
-			"to": [9.2, 15, 9.2],
+			"from": [6.5, 5, 6.5],
+			"to": [9.5, 15, 9.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
 				"north": {"uv": [11, 3, 14, 13], "texture": "#fruit"},
 				"east": {"uv": [11, 3, 14, 13], "texture": "#fruit"},

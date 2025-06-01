@@ -1,31 +1,31 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"parent": "dtphc2:block/fruit/generic/flower_age0",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/peppercorn",
 		"fruit": "dtphc2:block/peppercorn"
 	},
 	"elements": [
 		{
-			"from": [8, 11.2, 7.2],
-			"to": [8, 15.2, 8.8],
+			"from": [7, 10.2, 8],
+			"to": [9, 15.2, 8],
 			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.2, 8]},
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 15.2, 8]},
 			"faces": {
-				"east": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"},
-				"west": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"}
+				"north": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"},
+				"south": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [8, 11.2, 7.2],
-			"to": [8, 15.2, 8.8],
+			"from": [7, 10.2, 8],
+			"to": [9, 15.2, 8],
 			"shade": false,
-			"rotation": {"angle": -45, "axis": "y", "origin": [8, 7.2, 8]},
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 15.2, 8]},
 			"faces": {
-				"east": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"},
-				"west": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"}
+				"north": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"},
+				"south": {"uv": [0, 14, 5, 16], "rotation": 90, "texture": "#fruit"}
 			}
 		}
 	]

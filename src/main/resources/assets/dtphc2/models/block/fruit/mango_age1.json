@@ -1,23 +1,7 @@
 {
-	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
-	"ambientocclusion": false,
+	"parent": "dtphc2:block/fruit/generic/fruit_leaf_age1",
 	"textures": {
 		"particle": "dtphc2:block/mango",
 		"fruit": "dtphc2:block/mango"
-	},
-	"elements": [
-		{
-			"from": [7, 14, 7],
-			"to": [9, 16, 9],
-			"faces": {
-				"north": {"uv": [1, 3, 4, 6], "texture": "#fruit"},
-				"east": {"uv": [1, 3, 4, 6], "texture": "#fruit"},
-				"south": {"uv": [1, 3, 4, 6], "texture": "#fruit"},
-				"west": {"uv": [1, 3, 4, 6], "texture": "#fruit"},
-				"up": {"uv": [1, 0, 4, 3], "texture": "#fruit"},
-				"down": {"uv": [1, 6, 4, 9], "texture": "#fruit"}
-			}
-		}
-	]
+	}
 }

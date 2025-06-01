@@ -2,7 +2,7 @@
   "item_stack": "pamhc2trees:soursopitem",
   "block_shapes": [
     { "function": "fruit", "parameters": { "width": 4, "height": 1, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "width": 2, "height": 2.667, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 3, "height": 4, "stem_length": 0 } },
     { "function": "fruit", "parameters": { "width": 5, "height": 8, "stem_length": 0 } },
     { "function": "fruit", "parameters": { "width": 5, "height": 8, "stem_length": 1 } }
   ]

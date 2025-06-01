@@ -3,7 +3,7 @@
   "item_stack": "pamhc2trees:dragonfruititem",
   "block_shapes": [
     { "function": "fruit", "parameters": { "width": 4, "height": 1, "stem_length": 0 } },
-    { "function": "fruit", "parameters": { "width": 3, "height": 4, "stem_length": 0 } },
+    { "function": "fruit", "parameters": { "width": 3, "height": 5, "stem_length": 0 } },
     { "function": "fruit", "parameters": { "width": 4, "height": 8, "stem_length": 0 } },
     { "function": "fruit", "parameters": { "width": 4, "height": 9, "stem_length": 1 } }
   ]

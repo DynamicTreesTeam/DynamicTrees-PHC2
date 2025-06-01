@@ -4,28 +4,28 @@
   "max_age": 3,
   "block_shapes": {
     "east": [
-      { "function": "pod", "parameters": { "width": 3, "height": 7, "stem_length": 4, "side_offset": 4, "side": "east", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 3, "height": 8, "stem_length": 10, "side_offset": 6, "side": "east", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "east", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "east", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 4, "height": 7, "stem_length": 4, "side_offset": 4, "side": "east", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 6, "height": 8, "stem_length": 10, "side_offset": 6, "side": "east", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "east", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "east", "fraction": 20 } }
     ],
     "west": [
-      { "function": "pod", "parameters": { "width": 3, "height": 7, "stem_length": 4, "side_offset": 4, "side": "west", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 3, "height": 8, "stem_length": 10, "side_offset": 6, "side": "west", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "west", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "west", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 4, "height": 7, "stem_length": 4, "side_offset": 4, "side": "west", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 6, "height": 8, "stem_length": 10, "side_offset": 6, "side": "west", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "west", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "west", "fraction": 20 } }
     ],
     "north": [
-      { "function": "pod", "parameters": { "width": 3, "height": 7, "stem_length": 4, "side_offset": 4, "side": "north", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 3, "height": 8, "stem_length": 10, "side_offset": 6, "side": "north", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "north", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "north", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 4, "height": 7, "stem_length": 4, "side_offset": 4, "side": "north", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 6, "height": 8, "stem_length": 10, "side_offset": 6, "side": "north", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "north", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "north", "fraction": 20 } }
     ],
     "south": [
-      { "function": "pod", "parameters": { "width": 3, "height": 7, "stem_length": 4, "side_offset": 4, "side": "south", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 3, "height": 8, "stem_length": 10, "side_offset": 6, "side": "south", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "south", "fraction": 20 } },
-      { "function": "pod", "parameters": { "width": 4, "height": 10, "stem_length": 9, "side_offset": 6, "side": "south", "fraction": 20 } }
+      { "function": "pod", "parameters": { "width": 4, "height": 7, "stem_length": 4, "side_offset": 4, "side": "south", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 6, "height": 8, "stem_length": 10, "side_offset": 6, "side": "south", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "south", "fraction": 20 } },
+      { "function": "pod", "parameters": { "width": 8, "height": 10, "stem_length": 9, "side_offset": 6, "side": "south", "fraction": 20 } }
     ]
   }
 }

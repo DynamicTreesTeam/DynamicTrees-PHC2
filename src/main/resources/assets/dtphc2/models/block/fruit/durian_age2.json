@@ -1,16 +1,15 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/durian",
 		"fruit": "dtphc2:block/durian"
 	},
 	"elements": [
 		{
-			"from": [6, 9.6, 6],
-			"to": [10, 13.6, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.6, 8]},
+			"from": [5.5, 8, 5.5],
+			"to": [10.5, 13, 10.5],
 			"faces": {
 				"north": {"uv": [2.5, 2.5, 5, 5], "texture": "#fruit"},
 				"east": {"uv": [2.5, 2.5, 5, 5], "texture": "#fruit"},
@@ -21,7 +20,7 @@
 			}
 		},
 		{
-			"from": [8, 13.6, 7.5],
+			"from": [8, 13, 7.5],
 			"to": [8, 16, 8.5],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
@@ -31,7 +30,7 @@
 			}
 		},
 		{
-			"from": [7.5, 13.6, 8],
+			"from": [7.5, 13, 8],
 			"to": [8.5, 16, 8],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},

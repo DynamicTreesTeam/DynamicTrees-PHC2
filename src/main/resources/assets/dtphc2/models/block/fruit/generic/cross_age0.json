@@ -1,6 +1,9 @@
 {
     "ambientocclusion": false,
     "render_type": "minecraft:cutout_mipped",
+    "textures": {
+        "particle": "#fruit"
+    },
     "elements": [
         {   "from": [ 7, 15, 8 ],
             "to": [ 9, 16, 8 ],

@@ -1,17 +1,17 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"parent": "dtphc2:block/fruit/generic/flower_age0",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/peppercorn",
 		"fruit": "dtphc2:block/peppercorn"
 	},
 	"elements": [
 		{
-			"from": [10.4, 6.2, 13.45],
-			"to": [12, 10.2, 15.05],
-			"rotation": {"angle": 0, "axis": "y", "origin": [11.2, 3.2, 14.25]},
+			"from": [10, 6, 13],
+			"to": [12, 11, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [10.8, 3, 13.8]},
 			"faces": {
 				"north": {"uv": [1, 4, 3, 9], "texture": "#fruit"},
 				"east": {"uv": [1, 4, 3, 9], "texture": "#fruit"},

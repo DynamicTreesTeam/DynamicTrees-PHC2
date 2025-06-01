@@ -26,7 +26,6 @@ import static maxhyper.dtphc2.DynamicTreesPHC2.MOD_ID;
 @EventBusSubscriber(modid = MOD_ID)
 public class SpilePlacementEvent {
 
-
     @SubscribeEvent
     public static void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
 
@@ -40,24 +39,22 @@ public class SpilePlacementEvent {
         BlockPos pos = event.getPos();
         BlockState state = world.getBlockState(pos);
 
+        if(!state.is(DTPHC2Registries.CAN_BE_SPILED)) return;
+
         if (!TreeHelper.isBranch(state) || TreeHelper.getRadius(world, pos) < 7) return;
 
         BlockPos spilePos = pos.relative(Objects.requireNonNull(event.getFace()));
         if (!world.getBlockState(spilePos).canBeReplaced()) return;
 
-        if(state.is(DTPHC2Registries.CAN_BE_SPILED)){
-            // Remove one item from the player's hand
-            if (!player.isCreative()) heldItem.shrink(1);
-            // Play a sound
-            world.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1,1);
-            // Place the MapleSpileBlock at the clicked block's position
-            BlockPlaceContext context = new BlockPlaceContext(player, hand, heldItem, new BlockHitResult(player.getEyePosition(1.0f), event.getFace(), pos, false));
-            BlockState placeState = DTPHC2Blocks.MAPLE_SPILE_BLOCK.get().getStateForPlacement(context);
-            if (placeState == null) return;
-            world.setBlock(spilePos, placeState, 3);
-            event.setCancellationResult(InteractionResult.SUCCESS);
-            event.setCanceled(true);
-
-        }
+        if (!player.isCreative()) heldItem.shrink(1);
+        // Play a sound
+        world.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1,1);
+        // Place the MapleSpileBlock at the clicked block's position
+        BlockPlaceContext context = new BlockPlaceContext(player, hand, heldItem, new BlockHitResult(player.getEyePosition(1.0f), event.getFace(), pos, false));
+        BlockState placeState = DTPHC2Blocks.MAPLE_SPILE_BLOCK.get().getStateForPlacement(context);
+        if (placeState == null) return;
+        world.setBlock(spilePos, placeState, 3);
+        event.setCancellationResult(InteractionResult.SUCCESS);
+        event.setCanceled(true);
     }
 }

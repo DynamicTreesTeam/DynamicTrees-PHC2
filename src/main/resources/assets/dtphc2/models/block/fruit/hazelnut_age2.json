@@ -1,15 +1,15 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/hazelnut",
 		"fruit": "dtphc2:block/hazelnut"
 	},
 	"elements": [
 		{
-			"from": [6.8, 13.6, 6.8],
-			"to": [9.2, 16, 9.2],
+			"from": [6.5, 13, 6.5],
+			"to": [9.5, 16, 9.5],
 			"faces": {
 				"north": {"uv": [3, 6, 6, 9], "texture": "#fruit"},
 				"east": {"uv": [3, 6, 6, 9], "texture": "#fruit"},
@@ -20,36 +20,36 @@
 			}
 		},
 		{
-			"from": [9.2, 12.8, 6.8],
-			"to": [9.2, 15.2, 9.2],
-			"rotation": {"angle": 22.5, "axis": "z", "origin": [9.2, 15.2, 8]},
+			"from": [9.5, 12, 6.5],
+			"to": [9.5, 15, 9.5],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [9.5, 15, 9.5]},
 			"faces": {
 				"east": {"uv": [10, 6, 13, 9], "texture": "#fruit"},
 				"west": {"uv": [10, 6, 13, 9], "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [6.8, 12.8, 6.8],
-			"to": [6.8, 15.2, 9.2],
-			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.8, 15.2, 8]},
+			"from": [6.5, 12, 6.5],
+			"to": [6.5, 15, 9.5],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.5, 15, 6.5]},
 			"faces": {
 				"east": {"uv": [10, 12, 13, 15], "texture": "#fruit"},
 				"west": {"uv": [10, 12, 13, 15], "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [6.8, 12.8, 6.8],
-			"to": [9.2, 15.2, 6.8],
-			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 15.2, 6.8]},
+			"from": [6.5, 12, 6.5],
+			"to": [9.5, 15, 6.5],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [9.5, 15, 6.5]},
 			"faces": {
 				"north": {"uv": [10, 9, 13, 12], "texture": "#fruit"},
 				"south": {"uv": [10, 9, 13, 12], "texture": "#fruit"}
 			}
 		},
 		{
-			"from": [6.8, 12.8, 9.2],
-			"to": [9.2, 15.2, 9.2],
-			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 15.2, 9.2]},
+			"from": [6.5, 12, 9.5],
+			"to": [9.5, 15, 9.5],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [6.5, 15, 9.5]},
 			"faces": {
 				"north": {"uv": [10, 3, 13, 6], "texture": "#fruit"},
 				"south": {"uv": [10, 3, 13, 6], "texture": "#fruit"}

@@ -1,16 +1,16 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/peppercorn",
 		"fruit": "dtphc2:block/peppercorn"
 	},
 	"elements": [
 		{
-			"from": [7.2, 11, 7.2],
-			"to": [8.8, 15, 8.8],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"from": [7, 10, 7],
+			"to": [9, 15, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.8, 7, 7.8]},
 			"faces": {
 				"north": {"uv": [1, 4, 3, 9], "texture": "#fruit"},
 				"east": {"uv": [1, 4, 3, 9], "texture": "#fruit"},

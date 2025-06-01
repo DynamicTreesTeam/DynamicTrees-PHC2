@@ -1,16 +1,36 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout_mipped",
 	"ambientocclusion": false,
+	"render_type": "minecraft:cutout_mipped",
 	"textures": {
 		"particle": "dtphc2:block/passion_fruit",
 		"fruit": "dtphc2:block/passion_fruit"
 	},
 	"elements": [
 		{
-			"from": [6.4, 10.8, 6.4],
-			"to": [9.6, 14, 9.6],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7.6, 7, 8.4]},
+			"from": [7.5, 14.2, 8],
+			"to": [8.5, 15.2, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.2, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [15, 0, 16, 1], "texture": "#fruit"},
+				"south": {"uv": [15, 0, 16, 1], "texture": "#fruit"}
+			}
+		},
+		{
+			"from": [8, 14.2, 7.5],
+			"to": [8, 15.2, 8.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.2, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [15, 1, 16, 2], "texture": "#fruit"},
+				"west": {"uv": [15, 1, 16, 2], "texture": "#fruit"}
+			}
+		},
+		{
+			"from": [6, 10.2, 6],
+			"to": [10, 14.2, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.2, 6.4, 7.2]},
 			"faces": {
 				"north": {"uv": [10, 5, 14, 9], "texture": "#fruit"},
 				"east": {"uv": [10, 5, 14, 9], "texture": "#fruit"},
@@ -18,26 +38,6 @@
 				"west": {"uv": [10, 5, 14, 9], "texture": "#fruit"},
 				"up": {"uv": [10, 0, 14, 4], "texture": "#fruit"},
 				"down": {"uv": [10, 10, 14, 14], "texture": "#fruit"}
-			}
-		},
-		{
-			"from": [7.5, 14, 8],
-			"to": [8.5, 15, 8],
-			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7, 8], "rescale": true},
-			"faces": {
-				"north": {"uv": [15, 0, 16, 1], "texture": "#fruit"},
-				"south": {"uv": [15, 0, 16, 1], "texture": "#fruit"}
-			}
-		},
-		{
-			"from": [8, 14, 7.5],
-			"to": [8, 15, 8.5],
-			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7, 8], "rescale": true},
-			"faces": {
-				"east": {"uv": [15, 1, 16, 2], "texture": "#fruit"},
-				"west": {"uv": [15, 1, 16, 2], "texture": "#fruit"}
 			}
 		}
 	]
