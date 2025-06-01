@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
-      "item": "dtphc2:vanilla_vine"
+      "item": "dtphc2:ripe_peppercorn_item"
     },
 
     {
@@ -10,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "pamhc2trees:vanillabean_sapling"
+    "id": "dtphc2:peppercorn_vine",
+    "count": 2
   }
 }

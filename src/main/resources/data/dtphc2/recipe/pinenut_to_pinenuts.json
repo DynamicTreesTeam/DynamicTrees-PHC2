@@ -1,11 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
       "item": "dtphc2:pinenut_seed"
     }
   ],
   "result": {
-    "item": "pamhc2trees:pinenutitem"
+    "id": "pamhc2trees:pinenutitem"
   }
 }

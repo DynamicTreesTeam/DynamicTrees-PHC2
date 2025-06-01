@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
-      "item": "pamhc2trees:vanillabeanitem"
+      "item": "pamhc2trees:apple_sapling"
     },
 
     {
@@ -10,6 +11,6 @@
     }
   ],
   "result": {
-    "item": "dtphc2:vanilla_vine"
+    "id": "dynamictrees:apple_oak_seed"
   }
 }

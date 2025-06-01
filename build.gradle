@@ -92,7 +92,7 @@ dependencies {
 
     implementation ':dynamictrees:neoforge-1.21.1-1.5.0-BETA06'
     //implementation 'curse.maven:dynamictrees-252818:6565776'
-    implementation 'curse.maven:dynamictreesplus-478155:6566078'
+    implementation 'curse.maven:dynamictreesplus-478155:6593943'
     implementation 'curse.maven:jade-324717:6291517'
 
     implementation "curse.maven:pams-harvestcraft-2-trees-365460:6221523"
@@ -101,6 +101,8 @@ dependencies {
     runtimeOnly "curse.maven:glitchcore-955399:5660740"
     runtimeOnly "curse.maven:serene-seasons-291874:5753503"
     runtimeOnly "curse.maven:patchouli-306770:6164617"
+
+    runtimeOnly ':tagtooltips-neoforge:1.21.1-1.2.0'
 }
 
 tasks.withType(ProcessResources).configureEach {

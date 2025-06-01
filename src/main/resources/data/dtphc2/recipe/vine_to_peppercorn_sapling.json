@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
-      "item": "pamhc2trees:passionfruit_sapling"
+      "item": "dtphc2:peppercorn_vine"
     },
 
     {
@@ -10,6 +11,6 @@
     }
   ],
   "result": {
-    "item": "dtphc2:passion_fruit_vine"
+    "id": "pamhc2trees:peppercorn_sapling"
   }
 }

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
     "#"
   ],
@@ -9,7 +10,7 @@
     }
   },
   "result": {
-    "item": "pamhc2trees:coconutitem",
+    "id": "pamhc2trees:coconutitem",
     "count": 2
   }
 }
