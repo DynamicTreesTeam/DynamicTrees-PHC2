@@ -1,0 +1,19 @@
+{
+  "name": "Maple Syrup Tapping",
+  "icon": "pamhc2trees:maplesyrupitem",
+  "category": "dynamictrees:mechanics",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Maple Syrup Tapping",
+      "text": "The best way to obtain maple syrup from your maple trees is tapping.$(br2)To tap a tree, you first must use an axe to strip the trunk, then right click the stripped trunk with an iron ingot.$(br2)Now you can hang a bucket from that spile to start collecting syrup."
+    },
+    {
+      "type": "image",
+      "images": ["dtphc2:textures/patchouli/images/maple_1.png"],
+      "text": "A spile and bucket on a maple tree",
+      "border": true
+    }
+  ]
+} 

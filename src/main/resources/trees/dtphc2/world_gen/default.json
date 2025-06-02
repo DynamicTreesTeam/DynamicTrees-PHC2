@@ -98,7 +98,7 @@
     "__comment1": "Spawn beach and river trees",
     "__comment2": "When generating trees in biomes normally without them, ALWAYS set density and chance to 1, and adjust the odds with a splice.",
     "select": {
-      "AND": [{"OR": [{"tag": "#minecraft:is_beach"}, {"tag": "#minecraft:is_river"}]},{"tags": ["#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare"]}]
+      "AND": [{"OR": [{"tag": "#minecraft:is_beach"}, {"tag": "#minecraft:is_river"}]},{"tags": ["#minecraft:is_overworld", "!#c:is_spooky", "!#c:is_rare", "!#c:is_snowy"]}]
     },
     "apply": {
       "species": {
