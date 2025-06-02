@@ -22,55 +22,49 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "functions": [
             {
-              "type": "minecraft:item",
-              "functions": [
-                {
-                  "function": "dynamictrees:multiply_logs_count"
-                },
-                {
-                  "function": "minecraft:explosion_decay"
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
-                        }
-                      }
-                    ]
-                  }
-                }
-              ],
-              "name": "pamhc2trees:pamcinnamon"
+              "function": "dynamictrees:multiply_logs_count"
             },
             {
-              "type": "minecraft:item",
-              "functions": [
-                {
-                  "function": "dynamictrees:multiply_logs_count"
-                },
-                {
-                  "function": "dynamictrees:multiply_count",
-                  "multiplier": 4.5
-                },
-                {
-                  "function": "minecraft:explosion_decay"
-                }
-              ],
-              "name": "pamhc2trees:cinnamonitem"
+              "function": "dynamictrees:multiply_count",
+              "multiplier": 4.5
+            },
+            {
+              "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term":
+              {
+                "condition": "minecraft:any_of",
+                "terms": [
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "predicates": {
+                        "minecraft:enchantments": [
+                          {
+                            "enchantments": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "name": "pamhc2trees:cinnamonitem"
         }
       ]
     }
   ],
-  "random_sequence": "dtphc2:trees/branches/cinnamon"
+  "random_sequence": "dtphc2:trees/branches/maple"
 }

@@ -11,8 +11,8 @@
   "generate_sapling": true,
   "always_show_on_waila": true,
   "environment_factors" : {
-    "cold": 0.75,
-    "hot": 1.1
+    "#c:is_cold": 0.75,
+    "#c:is_hot": 1.1
   },
   "seasonal_fruiting_offset": null,
   "inherit_fruiting_offset_to_pods": true,

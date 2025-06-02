@@ -24,14 +24,13 @@ public class FruitVineItem extends BlockItem {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
         Level level = context.level();
         if (level == null) return;
         if (SeasonHelper.getSeasonValue(LevelContext.create(level), BlockPos.ZERO) == null) return;
         int flags = getSeasonalTooltipFlags(level);
 
         if (flags != 0) {
-            tooltipComponents.add(Component.literal("desc.dynamictrees.seasonal.fertile_seasons").append(":"));
+            tooltipComponents.add(Component.translatable("desc.dynamictrees.seasonal.fertile_seasons").append(":"));
 
             if ((flags & 15) == 15) {
                 tooltipComponents.add(Component.literal(" ").append(Component.translatable("desc.sereneseasons.year_round").withStyle(ChatFormatting.LIGHT_PURPLE)));
@@ -50,6 +49,7 @@ public class FruitVineItem extends BlockItem {
                 }
             }
         }
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 
     public int getSeasonalTooltipFlags(final Level world) {

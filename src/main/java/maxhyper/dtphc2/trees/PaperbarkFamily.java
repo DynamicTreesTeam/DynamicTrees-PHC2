@@ -50,18 +50,19 @@ public class PaperbarkFamily extends Family {
             }
 
             @Override
-            public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource rand) {
+            protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource rand) {
                 if (rand.nextFloat() < barkRegrowChance && isStrippedBranch()){
-                    int radius = TreeHelper.getRadius(world, pos);
-                    int radiusDown = TreeHelper.isBranch(world.getBlockState(pos.below())) ? TreeHelper.getRadius(world, pos.below()) : getMaxRadius();
-                    this.getFamily().getBranch().ifPresent(branch -> branch.setRadius(world, pos,
+                    int radius = TreeHelper.getRadius(level, pos);
+                    int radiusDown = TreeHelper.isBranch(level.getBlockState(pos.below())) ? TreeHelper.getRadius(level, pos.below()) : getMaxRadius();
+                    this.getFamily().getBranch().ifPresent(branch -> branch.setRadius(level, pos,
                                     Math.min(radiusDown, radius + (Services.CONFIG.getBoolConfig(IConfigHelper.ENABLE_STRIP_RADIUS_REDUCTION) ? 1 : 0)),
                                     null
                             )
                     );
                 }
-                super.tick(state, world, pos, rand);
+                super.randomTick(state, level, pos, rand);
             }
+
         };
         if (this.isFireProof()) branch.setFireSpreadSpeed(0).setFlammability(0);
         return branch;

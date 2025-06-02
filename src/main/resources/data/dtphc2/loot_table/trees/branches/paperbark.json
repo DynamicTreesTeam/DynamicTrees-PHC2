@@ -36,20 +36,27 @@
               ],
               "conditions": [
                 {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "predicates": {
+                          "minecraft:enchantments": [
+                            {
+                              "enchantments": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
+                            }
+                          ]
                         }
                       }
-                    ]
-                  }
+                    }
+                  ]
                 }
               ],
-              "name": "pamhc2trees:pampaperbark"
+              "name": "pamhc2trees:pammaple"
             },
             {
               "type": "minecraft:item",
@@ -93,17 +100,24 @@
               "condition": "minecraft:inverted",
               "term":
               {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
+                "condition": "minecraft:any_of",
+                "terms": [
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "predicates": {
+                        "minecraft:enchantments": [
+                          {
+                            "enchantments": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
+                          }
+                        ]
                       }
                     }
-                  ]
-                }
+                  }
+                ]
               }
             }
           ],
@@ -112,5 +126,5 @@
       ]
     }
   ],
-  "random_sequence": "dtphc2:trees/branches/paperbark"
+  "random_sequence": "dtphc2:trees/branches/maple"
 }

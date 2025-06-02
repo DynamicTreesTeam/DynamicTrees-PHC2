@@ -35,8 +35,9 @@ public final class RegisterJSONAppliers {
                         GenOnExtraSoilSpecies::setExtraSoil)
                 .register("log_drop_item", FruitLogSpecies.class, Item.class, FruitLogSpecies::setDropItem)
                 //.register("log_drop_item", FruitLogSpecies.class, ResourceLocation.class, FruitLogSpecies::setDropItem)
-                .register("log_drop_multiplier", FruitLogSpecies.class, Float.class, FruitLogSpecies::setMultiplier)
-                .register("log_drop_fake_log", FruitLogSpecies.class, Item.class, FruitLogSpecies::setFakeLog);
+                .register("log_drop_item_multiplier", FruitLogSpecies.class, Float.class, FruitLogSpecies::setItemMultiplier)
+                .register("log_drop_fake_log", FruitLogSpecies.class, Item.class, FruitLogSpecies::setFakeLog)
+                .register("log_drop_fake_log_multiplier", FruitLogSpecies.class, Float.class, FruitLogSpecies::setFakeLogMultiplier);
     }
 
 //    public static void registerFruitAppliers(PropertyAppliers<Fruit, JsonElement> appliers) {

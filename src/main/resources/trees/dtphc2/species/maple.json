@@ -1,9 +1,12 @@
 {
   "type": "dtphc2:fruit_log",
   "log_drop_item": "pamhc2trees:maplesyrupitem",
-  "log_drop_multiplier": 0.8,
-  "log_drop_fake_log": "dark_oak_log",
+  "log_drop_item_multiplier": 0.2,
+  "log_drop_fake_log": "spruce_log",
+  "log_drop_fake_log_multiplier": 0.8,
   "family": "dtphc2:maple",
+  "generate_seed": true,
+  "generate_sapling": true,
   "tapering": 0.3,
   "signal_energy": 14.0,
   "up_probability": 4,
@@ -11,9 +14,9 @@
   "growth_rate": 0.8,
   "leaves_properties": "dtphc2:maple",
   "environment_factors" : {
-    "hot": 0.75,
-    "dry": 0.75,
-    "forest": 1.05
+    "#c:is_hot": 0.75,
+    "#c:is_dry": 0.75,
+    "#is_forest": 1.05
   },
   "perfect_biomes": { "tags": [ "#forge:is_coniferous", "#is_overworld" ] },
   "primitive_sapling": "pamhc2trees:maple_sapling",

@@ -24,7 +24,7 @@ public class DripSyrupNode implements NodeInspector {
                 finished = true;
                 return false;
             }
-            for(Direction face : Direction.Plane.HORIZONTAL) { //Check all sides of this block
+            for(Direction face : Direction.Plane.HORIZONTAL.shuffledCopy(world.getRandom())) { //Check all sides of this block
                 BlockPos offPos = pos.relative(face);
                 BlockState state = world.getBlockState(offPos);
                 if(state.getBlock() == DTPHC2Blocks.MAPLE_SPILE_BUCKET_BLOCK.get()) { //Found a bucket
