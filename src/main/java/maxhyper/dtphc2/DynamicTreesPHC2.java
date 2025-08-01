@@ -35,6 +35,7 @@ import net.minecraftforge.data.event.GatherDataEvent;
 @Mod.EventBusSubscriber(modid = DynamicTreesPHC2.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DynamicTreesPHC2 {
     public static final String MOD_ID = "dtphc2";
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public static DTPConfigProxy DTPlusConfig;
 

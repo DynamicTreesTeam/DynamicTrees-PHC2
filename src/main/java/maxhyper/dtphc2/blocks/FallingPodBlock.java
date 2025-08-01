@@ -26,6 +26,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.Nonnull;
 import java.util.List;
 
+import static maxhyper.dtphc2.DynamicTreesPHC2.LOGGER;
+
 public class FallingPodBlock extends PodBlock implements IFallingFruit {
 
     DamageSource damageSource;
@@ -49,7 +51,7 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
     @Override
     public void doTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
         if (checkToFall(state, world, pos, random)){
-            //System.out.println(this.asItem());
+            //LOGGER.debug(this.asItem());
             doFall(state, world, pos);
         } else
             super.doTick(state, world, pos, random);
