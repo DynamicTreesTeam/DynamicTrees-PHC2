@@ -30,6 +30,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.function.Function;
 
+import static maxhyper.dtphc2.DynamicTreesPHC2.LOGGER;
+
 public abstract class MapleSpileCommon extends HorizontalDirectionalBlock {
 
     public static final BooleanProperty FILLED = BooleanProperty.create("filled");
@@ -54,7 +56,7 @@ public abstract class MapleSpileCommon extends HorizontalDirectionalBlock {
         int times = (to.ordinal() - from.get2DDataValue() + 4) % 4;
         for (int i = 0; i < times; i++) {
             buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> {
-                System.out.println("min: "+ maxZ+", "+minX+" | max: "+ minZ+ ", "+ maxX);
+                LOGGER.debug("min: "+ maxZ+", "+minX+" | max: "+ minZ+ ", "+ maxX);
                 buffer[1] = Shapes.or(buffer[1], Shapes.box(1- maxZ, minY, minX, 1- minZ, maxY, maxX));
             });
             buffer[0] = buffer[1];
