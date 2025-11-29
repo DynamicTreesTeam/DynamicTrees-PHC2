@@ -73,3 +73,8 @@ file="META-INF/accesstransformer.cfg"
     type="optional"
     versionRange="(0.0,)"
     ordering="AFTER"
+[[dependencies.${mod_id}]]
+    modId="dtbloomingnature"
+    type="optional"
+    versionRange="(0.0,)"
+    ordering="AFTER"

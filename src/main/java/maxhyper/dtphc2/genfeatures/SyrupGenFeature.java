@@ -75,8 +75,14 @@ public class SyrupGenFeature extends GenFeature {
     }
 
     public float seasonalFruitProductionFactor(LevelContext levelContext, BlockPos pos, GenFeatureConfiguration config) {
-        float season = SeasonHelper.getSeasonValue(levelContext, pos);
-        return config.getAsOptional(SEASONAL_OFFSET).isPresent() ? SeasonHelper.globalSeasonalFruitProductionFactor(levelContext, new BlockPos(0,(int)(season*64),-1), -config.get(SEASONAL_OFFSET), true) : 1.0F;
+        Float season = SeasonHelper.getSeasonValue(levelContext, pos);
+        if (config.getAsOptional(SEASONAL_OFFSET).isEmpty() || season == null) return 1.0f;
+
+        return SeasonHelper.globalSeasonalFruitProductionFactor(
+                levelContext,
+                new BlockPos(0,(int)(season*64),-1),
+                -config.get(SEASONAL_OFFSET),
+                true);
     }
 
 }

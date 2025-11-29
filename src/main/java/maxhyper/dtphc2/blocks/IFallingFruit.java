@@ -42,7 +42,7 @@ public interface IFallingFruit {
         if (!world.hasNearbyAlivePlayer(pos.getX(), rootY, pos.getZ(), getPlayerDistanceToFall())){
             return false;
         }
-        if (pos.getY() >= 0 && FallingBlock.isFree(world.getBlockState(pos.below()))) {
+        if (pos.getY() >= world.getMinBuildHeight() && FallingBlock.isFree(world.getBlockState(pos.below()))) {
             if (world.isLoaded(pos)) {
                 if (!world.isClientSide()) {
                     FallingBlockEntity fallingBlockEntity = getFallingEntity(world, pos, state);
