@@ -56,7 +56,7 @@ public abstract class MapleSpileCommon extends HorizontalDirectionalBlock {
         int times = (to.ordinal() - from.get2DDataValue() + 4) % 4;
         for (int i = 0; i < times; i++) {
             buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> {
-                LOGGER.debug("min: "+ maxZ+", "+minX+" | max: "+ minZ+ ", "+ maxX);
+                LOGGER.debug("min: {}, {} | max: {}, {}", maxZ, minX, minZ, maxX);
                 buffer[1] = Shapes.or(buffer[1], Shapes.box(1- maxZ, minY, minX, 1- minZ, maxY, maxX));
             });
             buffer[0] = buffer[1];

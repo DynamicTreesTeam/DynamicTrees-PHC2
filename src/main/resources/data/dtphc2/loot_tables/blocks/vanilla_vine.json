@@ -18,6 +18,43 @@
           }
         }
       ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dtphc2:vanilla_vine"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:any_of",
+          "terms": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": [
+                  "minecraft:shears"
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:silk_touch",
+                    "levels": {
+                      "min": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "functions": [

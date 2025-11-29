@@ -34,10 +34,10 @@ public class DTPHC2Items {
     }
 
     public static void acceptToDynamicTreesTab (BuildCreativeModeTabContentsEvent event){
-        event.accept(PASSION_FRUIT_VINE_ITEM);
-        event.accept(VANILLA_VINE_ITEM);
-        event.accept(PEPPERCORN_VINE_ITEM);
-        event.accept(RIPE_PEPPERCORN_ITEM);
+        event.accept(PASSION_FRUIT_VINE_ITEM.get());
+        event.accept(VANILLA_VINE_ITEM.get());
+        event.accept(PEPPERCORN_VINE_ITEM.get());
+        event.accept(RIPE_PEPPERCORN_ITEM.get());
     }
 
 }

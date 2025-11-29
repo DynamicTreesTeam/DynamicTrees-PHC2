@@ -12,7 +12,9 @@
   "seasonal_fruiting_offset": null,
   "inherit_fruiting_offset_to_fruits": true,
   "perfect_biomes": { "tags": [ "#is_forest", "#is_overworld" ] },
-  "primitive_saplings": "pamhc2trees:spiderweb_sapling",
+  "primitive_saplings": [
+    { "sapling_block": "pamhc2trees:spiderweb_sapling"}
+  ],
   "fruits": [
     "dtphc2:spiderweb"
   ],

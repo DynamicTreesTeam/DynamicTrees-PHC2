@@ -9,6 +9,7 @@ import com.ferreusveritas.dynamictrees.systems.fruit.Fruit;
 import com.ferreusveritas.dynamictrees.systems.pod.Pod;
 import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
+import com.mojang.logging.LogUtils;
 import com.pam.pamhc2trees.init.ItemRegistration;
 import maxhyper.dtphc2.init.DTPHC2Blocks;
 import maxhyper.dtphc2.compat.DTPConfig;
@@ -30,6 +31,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLConstructModEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.data.event.GatherDataEvent;
+import org.slf4j.Logger;
 
 @Mod(DynamicTreesPHC2.MOD_ID)
 @Mod.EventBusSubscriber(modid = DynamicTreesPHC2.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
