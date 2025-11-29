@@ -22,6 +22,7 @@
       "can_craft_seed_to_sapling": false
     }
   ],
+  "drop_seeds": true,
   "fruits": [
     "dtphc2:acorn"
   ],

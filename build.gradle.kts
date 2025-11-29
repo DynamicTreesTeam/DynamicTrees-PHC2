@@ -90,8 +90,8 @@ sourceSets.main.get().resources {
 dependencies {
     minecraft("net.minecraftforge:forge:$mcVersion-${property("forgeVersion")}")
 
-    implementation(fg.deobf("libs:DynamicTrees:1.20.1-1.3.0-BETA10.007"))
-    //implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
+    //implementation(fg.deobf("libs:DynamicTrees:1.20.1-1.3.0-BETA10.007"))
+    implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
     implementation(fg.deobf("curse.maven:pams-harvestcraft-2-trees-365460:4625518"))
     implementation(fg.deobf("com.ferreusveritas.dynamictreesplus:DynamicTreesPlus-$mcVersion:${property("dynamicTreesPlusVersion")}"))
     implementation(fg.deobf("curse.maven:jade-324717:${property("jadeVersion")}"))
@@ -101,6 +101,7 @@ dependencies {
     runtimeOnly(fg.deobf("curse.maven:pams-harvestcraft-2-food-extended-402231:5147171"))
 
     runtimeOnly(fg.deobf("mezz.jei:jei-$mcVersion-forge:${property("jeiVersion")}"))
+    runtimeOnly(fg.deobf("curse.maven:glitchcore-955399:${property("gcVersion")}"))
     runtimeOnly(fg.deobf("curse.maven:SereneSeasons-291874:${property("ssVersion")}"))
     runtimeOnly(fg.deobf("vazkii.patchouli:Patchouli:${property("patchouliVersion")}"))
 
