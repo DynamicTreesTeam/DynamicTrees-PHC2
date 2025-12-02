@@ -27,8 +27,8 @@ public class DragonFruitLeavesProperties extends PalmLeavesProperties {
     }
 
     @Override
-    public MapColor getDefaultMapColor() {
-        return MapColor.PLANT;
+    public BlockBehaviour.Properties getDefaultBlockProperties() {
+        return super.getDefaultBlockProperties().mapColor(MapColor.PLANT);
     }
 
     @Override

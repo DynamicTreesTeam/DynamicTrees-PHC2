@@ -90,12 +90,12 @@ configurations {
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    implementation ':dynamictrees:neoforge-1.21.1-1.5.0-BETA06'
-    //implementation 'curse.maven:dynamictrees-252818:6565776'
-    implementation 'curse.maven:dynamictreesplus-478155:6593943'
+    //implementation ':dynamictrees:neoforge-1.21.1-1.5.0'
+    implementation 'curse.maven:dynamictrees-252818:7272645'
+    implementation 'curse.maven:dynamictreesplus-478155:7272755'
     implementation 'curse.maven:jade-324717:6291517'
 
-    implementation "curse.maven:pams-harvestcraft-2-trees-365460:6221523"
+    implementation "curse.maven:pams-harvestcraft-2-trees-365460:6772154"
 
     runtimeOnly "curse.maven:jei-238222:5846880"
     runtimeOnly "curse.maven:glitchcore-955399:5660740"
