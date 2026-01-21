@@ -102,7 +102,7 @@ dependencies {
     runtimeOnly "curse.maven:serene-seasons-291874:5753503"
     runtimeOnly "curse.maven:patchouli-306770:6164617"
 
-    runtimeOnly ':tagtooltips-neoforge:1.21.1-1.2.0'
+    runtimeOnly 'curse.maven:tagtooltips-899941:6418051'
 }
 
 tasks.withType(ProcessResources).configureEach {
