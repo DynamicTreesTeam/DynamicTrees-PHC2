@@ -35,7 +35,7 @@ file="META-INF/accesstransformer.cfg"
 [[dependencies.${mod_id}]]
     modId="dynamictrees"
     type="required"
-    versionRange="[1.5.0-BETA5,)"
+    versionRange="[1.6.0-BETA4,)"
     ordering="AFTER"
     side="BOTH"
 

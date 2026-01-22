@@ -81,8 +81,7 @@ public class SyrupGenFeature extends GenFeature {
         return SeasonHelper.globalSeasonalFruitProductionFactor(
                 levelContext,
                 new BlockPos(0,(int)(season*64),-1),
-                -config.get(SEASONAL_OFFSET),
-                true);
+                -config.get(SEASONAL_OFFSET));
     }
 
 }

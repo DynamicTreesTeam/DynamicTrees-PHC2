@@ -1,6 +1,11 @@
 package maxhyper.dtphc2.blocks;
 
+import com.dtteam.dynamictrees.api.season.ClimateZoneType;
 import com.dtteam.dynamictrees.api.worldgen.LevelContext;
+import com.dtteam.dynamictrees.platform.Services;
+import com.dtteam.dynamictrees.platform.services.IConfigHelper;
+import com.dtteam.dynamictrees.systems.season.ClimateHelper;
+import com.dtteam.dynamictrees.systems.season.SeasonCompatibilityHandler;
 import com.dtteam.dynamictrees.systems.season.SeasonHelper;
 import com.dtteam.dynamictrees.tree.TreeHelper;
 import net.minecraft.core.BlockPos;
@@ -47,13 +52,13 @@ public class FruitVineBlock extends VineBlock {
     private Supplier<Item> fruit;
     private Supplier<Item> overripeFruit;
 
-    //private Integer fruitingOffset;
     private int matureAge = maxAge;
 
     @Nullable
     private Float seasonOffset = 0f;
 
-    private float flowerHoldPeriodLength = 0.5F;
+    private float flowerSeasonHoldPeriodStart = -1.5F;
+    private float flowerSeasonHoldPeriodEnd = -1.0F;
 
     private float minProductionFactor = 0.3F;
 
@@ -89,9 +94,6 @@ public class FruitVineBlock extends VineBlock {
     public void setMaxFruitsAround(int maxFruitsAround) {
         this.maxFruitsAround = maxFruitsAround;
     }
-    public void setFlowerHoldPeriodLength(float flowerHoldPeriodLength) {
-        this.flowerHoldPeriodLength = flowerHoldPeriodLength;
-    }
     public void setMinProductionFactor(float minProductionFactor) {
         this.minProductionFactor = minProductionFactor;
     }
@@ -115,6 +117,14 @@ public class FruitVineBlock extends VineBlock {
 
     public Float getSeasonOffset (){
         return seasonOffset;
+    }
+
+    public void setFlowerSeasonHoldPeriodStart(float flowerSeasonHoldPeriodStart) {
+        this.flowerSeasonHoldPeriodStart = flowerSeasonHoldPeriodStart;
+    }
+
+    public void setFlowerSeasonHoldPeriodEnd(float flowerSeasonHoldPeriodEnd) {
+        this.flowerSeasonHoldPeriodEnd = flowerSeasonHoldPeriodEnd;
     }
 
     @Override
@@ -169,9 +179,9 @@ public class FruitVineBlock extends VineBlock {
         }
     }
 
-    public float seasonalFruitProductionFactor(LevelContext LevelContext, BlockPos pos) {
+    public float seasonalFruitProductionFactor(LevelContext level, BlockPos pos) {
         return seasonOffset != null ?
-                SeasonHelper.globalSeasonalFruitProductionFactor(LevelContext, pos, -seasonOffset, false)
+                SeasonHelper.globalSeasonalFruitProductionFactor(level, pos, -seasonOffset)
                 : 1.0F;
     }
 
@@ -183,23 +193,26 @@ public class FruitVineBlock extends VineBlock {
         world.setBlock(pos, state.setValue(ageProperty, 0), 2);
     }
 
-    public final boolean isInFlowerHoldPeriod(Level world, BlockPos rootPos, Float seasonValue) {
-        if (seasonOffset == null) {
+
+    public final boolean isInFlowerHoldPeriod(Level level, BlockPos rootPos, Float seasonValue) {
+        Float offset = seasonOffset;
+        if (offset == null) {
             return false;
+        } else {
+            Float peakSeasonValue = SeasonHelper.getPeakFruitProductionSeason(LevelContext.create(level), rootPos, offset);
+            if (peakSeasonValue != null && this.flowerSeasonHoldPeriodEnd != 0.0F) {
+                float min = this.flowerSeasonHoldPeriodStart + peakSeasonValue;
+                float max = this.flowerSeasonHoldPeriodEnd + peakSeasonValue;
+                return SeasonHelper.isSeasonBetween(seasonValue, min, max);
+            } else {
+                return false;
+            }
         }
-        final Float peakSeasonValue = SeasonHelper.getSeasonManager()
-                .getPeakFruitProductionSeasonValue(LevelContext.create(world).level(), rootPos, seasonOffset);
-        if (peakSeasonValue == null || flowerHoldPeriodLength == 0.0F) {
-            return false;
-        }
-        final float min = peakSeasonValue - 1.5F;
-        final float max = min + flowerHoldPeriodLength;
-        return SeasonHelper.isSeasonBetween(seasonValue, min, max);
     }
 
     private float getFruitingChance(Level world, BlockPos pos) {
         if (seasonOffset == null) return baseFruitingChance;
-        float fruitFactor = SeasonHelper.globalSeasonalFruitProductionFactor(LevelContext.create(world), pos, seasonOffset, true);
+        float fruitFactor = SeasonHelper.globalSeasonalFruitProductionFactor(LevelContext.create(world), pos, seasonOffset);
         return baseFruitingChance * Math.max((fruitFactor + 0.25f), 1);
     }
 
