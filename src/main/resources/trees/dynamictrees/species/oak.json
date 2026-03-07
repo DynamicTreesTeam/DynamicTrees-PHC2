@@ -4,27 +4,9 @@
   "signal_energy": 12.0,
   "growth_rate": 0.8,
   "leaves_properties": "oak",
-  "generate_seed": true,
-  "generate_sapling": true,
-  "environment_factors" : {
-    "#c:is_cold": 0.75,
-    "#c:is_hot": 0.5,
-    "#c:is_dry": 0.5,
-    "#is_forest": 1.05
-  },
-  "perfect_biomes": { "types": [ "forest", "overworld" ] },
-  "primitive_saplings": [
-    { "sapling_block": "oak_sapling" },
-    {
-      "sapling_block": "pamhc2trees:acorn_sapling",
-      "can_craft_seed_to_sapling": false
-    },
-    {
-      "sapling_item": "pamhc2trees:acornitem",
-      "can_craft_seed_to_sapling": false
-    }
-  ],
-  "drop_seeds": true,
+  "preferred_climate" : "temperate",
+  "climate_tolerance": 0.6,
+  "primitive_sapling": "oak_sapling",
   "fruits": [
     "dtphc2:acorn"
   ],

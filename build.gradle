@@ -92,8 +92,8 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     //implementation ':dynamictrees:neoforge-1.21.1-1.5.0'
-    implementation 'curse.maven:dynamictrees-252818:7507363'
-    implementation 'curse.maven:dynamictreesplus-478155:7325159'
+    implementation 'curse.maven:dynamictrees-252818:7661136'
+    implementation 'curse.maven:dynamictreesplus-478155:7698617'
     implementation 'curse.maven:jade-324717:6291517'
 
     implementation "curse.maven:pams-harvestcraft-2-trees-365460:6772154"

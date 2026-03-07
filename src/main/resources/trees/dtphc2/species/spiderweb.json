@@ -6,12 +6,14 @@
   "leaves_properties": "oak",
   "generate_seed": true,
   "generate_sapling": true,
-  "environment_factors" : {
-
+  "preferred_climate" : "temperate",
+  "seasonal_offsets": {
+    "fruiting": {
+      "temperate": null,
+      "tropical": null
+    }
   },
-  "seasonal_fruiting_offset": null,
-  "inherit_fruiting_offset_to_fruits": true,
-  "perfect_biomes": { "tags": [ "#is_forest", "#is_overworld" ] },
+  "climate_tolerance": 1.0,
   "primitive_saplings": "pamhc2trees:spiderweb_sapling",
   "fruits": [
     "dtphc2:spiderweb"

@@ -12,10 +12,7 @@
   "up_probability": 4,
   "lowest_branch_height": 5,
   "leaves_properties": "dtphc2:paperbark",
-  "environment_factors" : {
-    "#c:is_cold": 0.8,
-    "#c:is_dry": 0.8
-  },
-  "perfect_biomes": { "tags": [ "#forge:is_swamp", "#is_overworld" ] },
+  "preferred_climate" : "tropical",
+  "climate_tolerance": 0.7,
   "primitive_sapling": "pamhc2trees:paperbark_sapling"
 }

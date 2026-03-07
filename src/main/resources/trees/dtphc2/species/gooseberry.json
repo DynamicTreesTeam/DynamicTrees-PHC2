@@ -8,12 +8,8 @@
   "leaves_properties": "oak",
   "generate_seed": true,
   "generate_sapling": true,
-  "environment_factors" : {
-
-  },
-  "seasonal_fruiting_offset": 0,
-  "inherit_fruiting_offset_to_fruits": true,
-  "perfect_biomes": { "tags": [ "#is_forest", "#is_overworld" ] },
+  "preferred_climate" : "cold",
+  "climate_tolerance": 0.3,
   "primitive_saplings": [
     { "sapling_block": "pamhc2trees:gooseberry_sapling" },
     {
